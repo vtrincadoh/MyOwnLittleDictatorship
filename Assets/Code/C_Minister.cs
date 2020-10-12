@@ -11,11 +11,13 @@ public class C_Minister : MonoBehaviour
     private List<string> surNames = new List<string>(new string[] { "Gray", "Joestart", "Habidin", "Espfer", "A" });
     [SerializeField] private Tipos.alineacion myAlineacion;
     public Puestos.puestos myPuesto;
+    public float sanity,rateOfSanityRecovery, rateOfSanityLost;
 
     private void Start()
     {
         SetName();
         setAlination();
+        sanity = Random.Range(30.5f, 55f);
     }
 
     private void SetName()
@@ -24,6 +26,12 @@ public class C_Minister : MonoBehaviour
         string name = names[Random.Range(0, names.Count)];
         string surName = surNames[Random.Range(0, surNames.Count)];
         ministerName = string.Format("{0} {1}",name, surName);
+    }
+
+    private void Update()
+    {
+        sanity += rateOfSanityRecovery * Time.deltaTime;
+        sanity = Mathf.Clamp(sanity, 0f, 100f);
     }
 
     private void setAlination()
@@ -57,7 +65,8 @@ public class C_Minister : MonoBehaviour
         {
             descision =  RandomBool();
         }
-        Debug.LogFormat("Minister {0} voted {1}", myAlineacion, descision);
+        Debug.LogFormat("Minister {0} with {1} alination voted {2}", ministerName, myAlineacion, descision);
+        if (descision) sanity -= rateOfSanityLost;
         return descision;
     }
 

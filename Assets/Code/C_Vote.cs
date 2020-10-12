@@ -14,7 +14,7 @@ public class C_Vote : MonoBehaviour
         ministerOnLevel = GameObject.FindGameObjectsWithTag("Minister");
     }
 
-    void InvokeVoting(GameObject proyect)
+    public void InvokeVoting(GameObject proyect)
     {
         Tipos.alineacion al = proyect.GetComponent<C_Project>().projectAl;
         results(al);
