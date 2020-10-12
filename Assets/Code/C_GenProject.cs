@@ -7,15 +7,15 @@ using System;
 
 public class C_GenProject : MonoBehaviour
 {
-    GameObject[] _ministerOnLevel;
-    Dictionary<alineacion, int> _nType = new Dictionary<alineacion, int> {
+    GameObject[] _ministerOnLevel; //Arreglo con ministros
+    Dictionary<alineacion, int> _nType = new Dictionary<alineacion, int> { //Cantidad de ministros por tipo
         {alineacion.Economico, 0},
         {alineacion.Humanista, 0},
         {alineacion.Patriota, 0},
     };
-    public GameObject prefabProject;
+    public GameObject prefabProject; //Prefab de objeto con C_Project como componente
 
-    public void GenerateProject()
+    public void GenerateProject() //Instanciar el Prefab con alineación
     {
         alineacion domType = GetDominantType();
         var choosableTypes = Enum
@@ -28,13 +28,16 @@ public class C_GenProject : MonoBehaviour
         newProject.GetComponent<C_Project>().projectAl = choosableTypes[(int)UnityEngine.Random.value];
     }
 
-    public alineacion GetDominantType()
+    public alineacion DominantType //Alineación mayor de la mesa
     {
-        foreach (GameObject minister in GameObject.FindGameObjectsWithTag("Minister"))
+        get
         {
-            _nType[minister.GetComponent<C_Minister>().myAlineacion]++;            
+            foreach (GameObject minister in GameObject.FindGameObjectsWithTag("Minister"))
+            {
+                _nType[minister.GetComponent<C_Minister>().myAlineacion]++;
+            }
+            alineacion _keyOfMaxValue = _nType.Aggregate((x, y) => x.Value > y.Value ? x : y).Key;
+            return _keyOfMaxValue;
         }
-        alineacion _keyOfMaxValue = _nType.Aggregate((x, y) => x.Value > y.Value ? x : y).Key;
-        return _keyOfMaxValue;
     }
 }
