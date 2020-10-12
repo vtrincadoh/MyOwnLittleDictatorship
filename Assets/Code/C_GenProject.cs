@@ -17,7 +17,7 @@ public class C_GenProject : MonoBehaviour
 
     public void GenerateProject() //Instanciar el Prefab con alineación
     {
-        alineacion domType = GetDominantType();
+        alineacion domType = DominantType;
         var choosableTypes = Enum
     .GetValues(typeof(alineacion))
     .Cast<alineacion>()
