@@ -1,18 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Tipos;
 
 public class C_Minister : MonoBehaviour
-{
-    public enum alineacion
-    {
-        Economico,Humanista,Patriota
-    }
-
+{ 
     public string ministerName;
-    public alineacion myAlineacion;
+    public Tipos.alineacion myAlineacion;
 
-    public bool AskVote(alineacion alineacionProyecto)
+    public bool AskVote(Tipos.alineacion alineacionProyecto)
     {
         bool descision; 
         if(alineacionProyecto.GetType() == myAlineacion.GetType())
