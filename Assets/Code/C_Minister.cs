@@ -9,7 +9,7 @@ public class C_Minister : MonoBehaviour
     public string ministerName;
     private List<string> names = new List<string>(new string[] { "Eduardo", "Jeremy", "Abdul", "Joseph", "Jonathan" });
     private List<string> surNames = new List<string>(new string[] { "Gray", "Joestart", "Habidin", "Espfer", "A" });
-    [SerializeField] private Tipos.alineacion myAlineacion;
+    public Tipos.alineacion myAlineacion;
     public Puestos.puestos myPuesto;
     public float sanity,rateOfSanityRecovery, rateOfSanityLost;
 
