@@ -6,7 +6,7 @@ using Tipos;
 public class C_Vote : MonoBehaviour
 {
     public Object[] ministerOnLevel;
-    private int yes, no;
+    private int yes, no; //Cuántos dijeron que sí y cuántos que no
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +16,11 @@ public class C_Vote : MonoBehaviour
 
     void InvokeVoting(GameObject proyect)
     {
-        Tipos.alineacion al = proyect.GetComponent<C_Proyect>().proyectAl;
+        Tipos.alineacion al = proyect.GetComponent<C_Project>().projectAl;
         results(al);
         if(yes > no) Debug.Log("Se Aprueba"); //Hacer do while
         else if (yes < no) Debug.Log("Se Rechaza");
-        else
+        else //Si hay empate se repite la votacion
         {
             results(al);
             if (yes > no) Debug.Log("Se Aprueba");
@@ -28,7 +28,7 @@ public class C_Vote : MonoBehaviour
         }
     }
 
-    void results(Tipos.alineacion alin)
+    void results(Tipos.alineacion alin) //cuenta de votos
     {
         yes = no = 0;
         foreach (GameObject minister in ministerOnLevel)
