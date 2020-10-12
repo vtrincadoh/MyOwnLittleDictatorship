@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Tipos;
+using Puestos;
 
 public class C_Minister : MonoBehaviour
 { 
     public string ministerName;
     public Tipos.alineacion myAlineacion;
+    public Puestos.puestos myPuesto;
 
     public bool AskVote(Tipos.alineacion alineacionProyecto)
     {

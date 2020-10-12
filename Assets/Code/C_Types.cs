@@ -13,4 +13,11 @@ namespace Tipos
         Economico, Humanista, Patriota
     }
 }
+namespace Puestos
+{
+    public enum puestos
+    {
+        A,B,C,D,E,F,G
+    }
+}
 

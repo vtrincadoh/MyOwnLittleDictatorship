@@ -18,13 +18,13 @@ public class C_Vote : MonoBehaviour
     {
         Tipos.alineacion al = proyect.GetComponent<C_Proyect>().proyectAl;
         results(al);
-        if(yes > no) Debug.Log("Se Aprueba");
+        if(yes > no) Debug.Log("Se Aprueba"); //Hacer do while
         else if (yes < no) Debug.Log("Se Rechaza");
         else
         {
             results(al);
             if (yes > no) Debug.Log("Se Aprueba");
-            else if (yes <= no) Debug.Log("Se Rechaza");
+            else Debug.Log("Se Rechaza");
         }
     }
 
