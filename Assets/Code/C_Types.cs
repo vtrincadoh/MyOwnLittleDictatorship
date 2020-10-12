@@ -10,7 +10,7 @@ namespace Tipos
 {
     public enum alineacion
     {
-        Economico, Humanista, Patriota
+        Economico, Humanista, Patriota, standart
     }
 }
 namespace Puestos
