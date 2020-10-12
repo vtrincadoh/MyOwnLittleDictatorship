@@ -12,18 +12,23 @@ public class C_Minister : MonoBehaviour
     public string ministerName;
     public alineacion myAlineacion;
 
-    public int AskVote(alineacion alineacionProyecto)
+    public bool AskVote(alineacion alineacionProyecto)
     {
-        int desicion = 0; // 0 = rechazo y 1 = apruebo
+        bool descision; 
         if(alineacionProyecto.GetType() == myAlineacion.GetType())
         {
-            desicion = 1;
+            descision = true;
         }
         else
         {
-            desicion = Random.Range(0, 1);
+            descision =  RandomBool();
         }
-        Debug.LogFormat("Minister {0} voted {1}", ministerName, desicion);
-        return desicion;
+        Debug.LogFormat("Minister {0} voted {1}", myAlineacion, descision);
+        return descision;
+    }
+
+    private bool RandomBool()
+    {
+        return (Random.value > 0.5f);
     }
 }
