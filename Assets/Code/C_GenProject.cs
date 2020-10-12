@@ -28,13 +28,16 @@ public class C_GenProject : MonoBehaviour
         newProject.GetComponent<C_Project>().projectAl = choosableTypes[(int)UnityEngine.Random.value];
     }
 
-    public alineacion GetDominantType() //Alineación mayor de la mesa
+    public alineacion DominantType //Alineación mayor de la mesa
     {
-        foreach (GameObject minister in GameObject.FindGameObjectsWithTag("Minister"))
+        get
         {
-            _nType[minister.GetComponent<C_Minister>().myAlineacion]++;            
+            foreach (GameObject minister in GameObject.FindGameObjectsWithTag("Minister"))
+            {
+                _nType[minister.GetComponent<C_Minister>().myAlineacion]++;
+            }
+            alineacion _keyOfMaxValue = _nType.Aggregate((x, y) => x.Value > y.Value ? x : y).Key;
+            return _keyOfMaxValue;
         }
-        alineacion _keyOfMaxValue = _nType.Aggregate((x, y) => x.Value > y.Value ? x : y).Key;
-        return _keyOfMaxValue;
     }
 }
