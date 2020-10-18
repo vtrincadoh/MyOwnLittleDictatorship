@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Tipos;
 using Puestos;
+using UnityEngine.UI;
 
 public class C_Minister : MonoBehaviour
 { 
@@ -41,15 +42,17 @@ public class C_Minister : MonoBehaviour
         {
             case 0:
                 myAlineacion = alineacion.Economico;
+                gameObject.GetComponent<Image>().color = Color.green;
                 break;
             case 1:
                 myAlineacion = alineacion.Humanista;
+                gameObject.GetComponent<Image>().color = Color.blue;
                 break;
             case 2:
                 myAlineacion = alineacion.Patriota;
+                gameObject.GetComponent<Image>().color = Color.red;
                 break;
             default:
-                myAlineacion = alineacion.standart;
                 break;
         }
     }

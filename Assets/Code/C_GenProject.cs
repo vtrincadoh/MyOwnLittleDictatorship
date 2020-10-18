@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using Tipos;
 using System;
+using UnityEngine.UI;
 
 public class C_GenProject : MonoBehaviour
 {
@@ -44,20 +45,64 @@ public class C_GenProject : MonoBehaviour
     public void GenerateProject() //Instanciar el Prefab con alineación
     {
         alineacion domType = DominantType;
-        var choosableTypes = Enum
+        /*var choosableTypes = Enum
     .GetValues(typeof(alineacion))
     .Cast<alineacion>()
     .Where(item => item != domType)
-    .ToArray();
+    .ToArray(); *///Hacer un cambio a listas con distintos toamaños donde poseean la catindad de alineaciones a seleccionar
+        alineacion[] ListaAElegir = new alineacion[bProject.Count()];
+        int cantDom = 0;
+        for(int x = 0; x < bProject.Count(); x++)
+        {
+            alineacion adding = (alineacion)UnityEngine.Random.Range(0, 3);
+            if(adding == domType)
+            {
+                if(cantDom >= 1)
+                {
+                    do
+                    {
+                        adding = (alineacion)UnityEngine.Random.Range(0, 3);
+                    } while (adding == domType);
+                }
+                cantDom++;
+            }
+            ListaAElegir[x] = adding;
+        }
         /*
         GameObject newProject = Instantiate(prefabProject);
         newProject.GetComponent<C_Project>().projectAl = choosableTypes[(int)UnityEngine.Random.value];
         */
         //New form
+        foreach(var i in ListaAElegir)
+        {
+            Debug.Log("There is " + i);
+        }
+        int a = 0;
         foreach(GameObject button in bProject)
         {
             button.GetComponent<C_Project>().projectName = SetName();
-            button.GetComponent<C_Project>().projectAl = choosableTypes[(int)UnityEngine.Random.value];
+            button.GetComponent<C_Project>().projectAl = ListaAElegir[a]; //choosableTypes[(int)UnityEngine.Random.value];
+            a++;
+            switch (button.GetComponent<C_Project>().projectAl)
+            {
+                case alineacion.Economico:
+                    button.GetComponent<Image>().color = Color.green;
+                    break;
+                case alineacion.Humanista:
+                    button.GetComponent<Image>().color =  Color.blue;
+                    break;
+                case alineacion.Patriota:
+                    button.GetComponent<Image>().color = Color.red;
+                    break;
+                default:
+                    button.GetComponent<Image>().color = Color.black;
+                    break;
+            }
+            if(DominantType == button.GetComponent<C_Project>().projectAl){
+                button.GetComponent<Image>().color = Color.black;
+                button.GetComponent<Button>().interactable = false;
+            }
+            else button.GetComponent<Button>().interactable = true;
         }
     }
 
