@@ -64,7 +64,7 @@ El jugador gana cuando logra hacer **tres proyectos de cada tipo**, _i.e._ tres 
   El jugador analiza los resultados de la votación e identifica si desea cambiar un ministro. En esta iteración toda la información respecto a la votación es pública.
 
 * **Etapa 4:**  
-  El jugador cambia a uno de los ministros si así lo desea. En este prototipo no existe la mecánica de [adoctrinar](#mecánicas).
+  El jugador cambia a solo uno de los ministros si así lo desea. Al cambiar un ministro se hace un _reroll_ y se decide aleatoriamente el nuevo alineamiento. En este prototipo no existe la mecánica de [adoctrinar](#mecánicas).
   <!--¿Sólo a uno?-->
   <!--¿Reroll o elige alineamiento?-->
 
