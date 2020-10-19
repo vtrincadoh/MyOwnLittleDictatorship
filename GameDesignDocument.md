@@ -30,7 +30,7 @@ Eres un dictador que tiene como objetivo ser idolatrado por su gente, por lo que
 ## Mecánicas
 *   **Proponer Proyecto:** El jugador puede escoger un proyecto de una lista para proponer a sus ministros. Solamente aquellos proyectos que no sean de la alineamiento dominante del gabinete pueden ser propuestos.
 *   **Adoctrinar:** _a.k.a._ Reformar
-*   **Cambiar:**
+*   **Cambiar:** Elimina a uno de los ministros de un puesto
 # 5. Historia y Narrativa
 # 6. Niveles y progresión
 # 7. Interfaces
@@ -45,7 +45,7 @@ El prototipo consta de una sola pantalla que tiene un rectángulo café emulando
 
 ![Prototipo 1 c/ anotaciones](MiscArt/Prototipo%201.png)
 
-El jugador gana cuando logra hacer **tres proyectos de cada tipo**, _i.e._ tres proyectos económicos, tres humanistas, y tres patriotas.
+El jugador gana cuando logra hacer **tres proyectos de cada tipo**, _i.e._ tres proyectos económicos, tres humanistas, y tres patriotas.  Por otro lado, el jugador pierde cuando (...).
 
 <!--¿Y cómo pierdo?-->
 
@@ -57,14 +57,14 @@ El jugador gana cuando logra hacer **tres proyectos de cada tipo**, _i.e._ tres 
   El jugador escoge el proyecto que desea proponer.
 
 * **Etapa 2:**  
-  [AUTOMÁTICO] Los ministros votan por los proyectos. Si el ministro es del mismo alineamiento que el proyecto, entonces aprueba la propuesta. Si no lo es, vota al azar con una probabilidad de 50/50.
+  [AUTOMÁTICO] Los ministros votan por los proyectos. Si el ministro es del mismo alineamiento que el proyecto, entonces aprueba la propuesta. Si no lo es, vota al azar con una probabilidad de 50/50. Este último es un comportamiento único a esta iteración.
   La aprobación se determina por mayoría de votos. Si hay un empate se repita le votación. Si vuelve a haber un empate se rechaza la propuesta.
 
 * **Etapa 3:**  
   El jugador analiza los resultados de la votación e identifica si desea cambiar un ministro. En esta iteración toda la información respecto a la votación es pública.
 
 * **Etapa 4:**  
-  El jugador cambia a uno de los ministros si así lo desea. En este prototipo no existe la mecánica de [adoctrinar](#habilidades-del-jugador).
+  El jugador cambia a uno de los ministros si así lo desea. En este prototipo no existe la mecánica de [adoctrinar](#mecánicas).
   <!--¿Sólo a uno?-->
   <!--¿Reroll o elige alineamiento?-->
 
