@@ -39,9 +39,11 @@ Eres un dictador que tiene como objetivo ser idolatrado por su gente, por lo que
 El juego tendrá un estilo _low-poly_
 # 10. Bitácora de Iteraciones
 ## Prototipo 1
-El objetivo de este primer prototipo es probar y descubrir el _core loop_, implementando, completando, y desafiando las propuestas de la fase de ideación del proyecto. Se omiten algunas funcionalidades planeadas en virtud del tiempo.
+El objetivo de este primer prototipo es descubrir y probar el _core loop_, implementando, completando, y desafiando las ideas propuestas en la fase inicial del proyecto. Se omiten algunas funciones planeadas en virtud del tiempo.
 
-<!--img-->
+El prototipo consta de una sola pantalla que tiene un rectángulo café emulando una mesa, con siete ministros alrededor representados por círculos. Sobre la mesa hay ocho botones que representan cada proyecto. Los puestos de los ministros están nominados según su posición relativa a la mesa; a las 12 está el puesto `A`, y luego siguen secuencialmente en la dirección de las manillas del reloj. Los ministros y los proyectos están etiquetados por color, de tal forma que su alineamiento sea inmediatamente distinguible.
+
+![Prototipo 1 c/ anotaciones](.\MiscArt\Prototipo 1.png)
 
 El jugador gana cuando logra hacer **tres proyectos de cada tipo**, _i.e._ tres proyectos económicos, tres humanistas, y tres patriotas.
 
@@ -59,10 +61,10 @@ El jugador gana cuando logra hacer **tres proyectos de cada tipo**, _i.e._ tres 
   La aprobación se determina por mayoría de votos. Si hay un empate se repita le votación. Si vuelve a haber un empate se rechaza la propuesta.
 
 * **Etapa 3:**  
-  El jugador analiza los resultados de la votación e identifica si quiere cambiar un ministro. En este prototipo  toda la información de la votación es pública.
+  El jugador analiza los resultados de la votación e identifica si desea cambiar un ministro. En esta iteración toda la información respecto a la votación es pública.
 
 * **Etapa 4:**  
-  El jugador cambia a uno de los ministros, o si lo desea, pasa. En este prototipo no existe la mecánica de [adoctrinar](#habilidades-del-jugador).
+  El jugador cambia a uno de los ministros si así lo desea. En este prototipo no existe la mecánica de [adoctrinar](#habilidades-del-jugador).
   <!--¿Sólo a uno?-->
   <!--¿Reroll o elige alineamiento?-->
 
