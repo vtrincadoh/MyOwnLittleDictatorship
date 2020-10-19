@@ -39,6 +39,7 @@ public class C_Phase : MonoBehaviour
 
     public void phase1()
     {
+        //Generate proyects
         Debug.Log("Generating");
         generator.EnableButtons();
         generator.GenerateProject();
@@ -46,6 +47,7 @@ public class C_Phase : MonoBehaviour
 
     public void phase2(GameObject button)
     {
+        //Voting phase
         Debug.Log("Voting");
         voting.InvokeVoting(button);
         generator.DisableButtons();

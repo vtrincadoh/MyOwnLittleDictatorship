@@ -59,8 +59,8 @@ public class C_Minister : MonoBehaviour
 
     public bool AskVote(Tipos.alineacion alineacionProyecto)
     {
-        bool descision; 
-        if(alineacionProyecto.GetType() == myAlineacion.GetType())
+        bool descision;
+        if (alineacionProyecto == myAlineacion)
         {
             descision = true;
         }
