@@ -21,6 +21,16 @@ public class C_Phase : MonoBehaviour
         minister = GameObject.FindGameObjectsWithTag("Minister");
     }
 
+    private void CheckSanity() //Check if everybody is insane or theres still insanity in ministers
+    {
+        bool everyBodyInsane = false;
+        foreach (GameObject m in minister)
+        {
+            if (m.GetComponent<C_Minister>().sanity < 100f) everyBodyInsane = true;
+        }
+        if (!everyBodyInsane) lostConditionMeet = true;
+    }
+
     private void EnableMinisterButtons()
     {
         foreach(GameObject x in minister)
@@ -54,6 +64,7 @@ public class C_Phase : MonoBehaviour
             phase1();
             ChangeBool();
         }
+        CheckSanity();
     }
 
     public void phase1()
