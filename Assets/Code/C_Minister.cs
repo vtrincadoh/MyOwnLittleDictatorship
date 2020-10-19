@@ -16,9 +16,14 @@ public class C_Minister : MonoBehaviour
 
     private void Start()
     {
+        GenerateChar();
+        sanity = Random.Range(30.5f, 55f);
+    }
+
+    public void GenerateChar()
+    {
         SetName();
         setAlination();
-        sanity = Random.Range(30.5f, 55f);
     }
 
     private void SetName()
@@ -38,6 +43,7 @@ public class C_Minister : MonoBehaviour
     private void setAlination()
     {
         int i = Random.Range(0, 2);
+        Debug.Log("For " + gameObject.name + " is " + i);
         switch (i)
         {
             case 0:

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Tipos;
 
 public class C_Phase : MonoBehaviour
@@ -10,12 +11,30 @@ public class C_Phase : MonoBehaviour
     private bool proyectsGenerated = false; //Started new generated proyects
     private bool winConditionMeet = false; //Meet the win condition
     private bool lostConditionMeet = false; //Meet the loss condition
+    public GameObject[] minister; //Group of ministers in game
 
     // Start is called before the first frame update
     void Start()
     {
         generator = gameObject.GetComponent<C_GenProject>();
         voting = gameObject.GetComponent<C_Vote>();
+        minister = GameObject.FindGameObjectsWithTag("Minister");
+    }
+
+    private void EnableMinisterButtons()
+    {
+        foreach(GameObject x in minister)
+        {
+            x.GetComponent<Button>().interactable = true;
+        }
+    }
+
+    private void DisableMinisterButtons()
+    {
+        foreach (GameObject x in minister)
+        {
+            x.GetComponent<Button>().interactable = false;
+        }
     }
 
     private void Update()
@@ -39,6 +58,7 @@ public class C_Phase : MonoBehaviour
 
     public void phase1()
     {
+        DisableMinisterButtons();
         //Generate proyects
         Debug.Log("Generating");
         generator.EnableButtons();
@@ -58,15 +78,26 @@ public class C_Phase : MonoBehaviour
     {
         //Review results
         Debug.Log("Reviewing");
+        EnableMinisterButtons();
         //Get dominant type and compare with proyect type
-        Invoke("phase4", 5f);
     }
 
-    public void phase4()
+    public void phase4(GameObject m)
     {
         //Change or Adoctrinate
         Debug.Log("Changing");
-        Invoke("ChangeBool", 5f); ;
+        if(m.name == "Skip")
+        {
+            Debug.Log("Skipped vote");
+        }
+        else
+        {
+            Debug.Log("Changing minister " + m.name);
+            m.GetComponent<C_Minister>().GenerateChar();
+            Debug.Log("Now is " + m.GetComponent<C_Minister>().ministerName + " of " + m.GetComponent<C_Minister>().myAlineacion);
+        }
+        DisableMinisterButtons();
+        Invoke("ChangeBool", 5f);
     }
 
     void ChangeBool()
