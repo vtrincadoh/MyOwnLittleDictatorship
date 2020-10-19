@@ -11,6 +11,8 @@ public class C_GenProject : MonoBehaviour
     private List<string> building = new List<string>(new string[] { "Hospital", "Banco", "Parque", "Estadio", "Edificio" }); //Tipo de construccion (Se podria separar por tipo)
     private List<string> buldingName = new List<string>(new string[] { "El sabio", "Gran nacion", "Altisimo", "Genial", "Superbio" }); //Nombre de la contruccion
 
+    
+
     GameObject[] _ministerOnLevel; //Arreglo con ministros
     Dictionary<alineacion, int> _nType = new Dictionary<alineacion, int> { //Cantidad de ministros por tipo
         {alineacion.Economico, 0},

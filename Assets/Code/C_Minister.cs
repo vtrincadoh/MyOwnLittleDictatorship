@@ -13,11 +13,12 @@ public class C_Minister : MonoBehaviour
     public Tipos.alineacion myAlineacion;
     public Puestos.puestos myPuesto;
     public float sanity,rateOfSanityRecovery, rateOfSanityLost;
-    public bool Force;
+    public Text posName;
 
     private void Start()
     {
         GenerateChar();
+        posName.text = myPuesto.ToString();
         sanity = Random.Range(30.5f, 55f);
     }
 
