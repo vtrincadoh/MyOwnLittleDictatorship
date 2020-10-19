@@ -55,7 +55,7 @@ El jugador debe aprobar tres proyectos de cada tipo para ganar, _i.e._ tres proy
 
 <!--¿Y cómo pierdo?-->
 
-* **Etapa 0: **  
+* **Etapa 0:**  
   Se generan 7 ministros, con nombres y alineaciones aleatorios.
   Se generan además 8 proyectos aleatoriamente de todas las alineaciones. Aquellos que sean de la misma alineamiento que la alineamiento dominante del gabinete son inelegibles. Ej: Si 4/7 ministros son económicos, entonces los proyectos de tipo económicos no son elegibles.
   
