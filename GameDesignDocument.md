@@ -28,9 +28,15 @@ Eres un dictador que tiene como objetivo ser idolatrado por su gente, por lo que
 * **Fase 3:** El jugador analiza los resultados de la votación y decide qué cambios debe hacer a su gabinete.
 * **Fase 4:** El jugador reforma o cambia a sus ministros.
 ## Mecánicas
-*   **Proponer Proyecto:** El jugador puede escoger un proyecto de una lista para proponer a sus ministros. Solamente aquellos proyectos que no sean de la alineamiento dominante del gabinete pueden ser propuestos.
-*   **Adoctrinar:** _a.k.a._ Reformar
-*   **Cambiar:** Elimina a uno de los ministros de un puesto
+* **Proponer Proyecto:** El jugador puede escoger un proyecto de una lista para proponer a sus ministros. Solamente aquellos proyectos que no sean del alineamiento dominante del gabinete pueden ser propuestos.
+
+* **Adoctrinar:** _a.k.a. Reformar_. Modifica a un ministro sin cambiarlo por otro **[WIP]**.
+
+* **Cambiar:** Elimina a uno de los ministros de un puesto, y lo cambia por otro con un alineamiento distinto.
+
+  <!--Recuérdame hacer una sección para los ministros donde vaya esto VVV-->
+
+*   **Cordura:** _a.k.a. Sanidad_. Cantidad asociada a cada ministro. Factor importante que determina cuándo pierde el jugador.
 # 5. Historia y Narrativa
 # 6. Niveles y progresión
 # 7. Interfaces
@@ -41,11 +47,11 @@ El juego tendrá un estilo _low-poly_
 ## Prototipo 1
 El objetivo de este primer prototipo es descubrir y probar el _core loop_, implementando, completando, y desafiando las ideas propuestas en la fase inicial del proyecto. Se omiten algunas funciones planeadas en virtud del tiempo.
 
-El prototipo consta de una sola pantalla que tiene un rectángulo café emulando una mesa, con siete ministros alrededor representados por círculos. Sobre la mesa hay ocho botones que representan cada proyecto. Los puestos de los ministros están nominados según su posición relativa a la mesa; a las 12 está el puesto `A`, y luego siguen secuencialmente en la dirección de las manillas del reloj. Los ministros y los proyectos están etiquetados por color, de tal forma que su alineamiento sea inmediatamente distinguible.
+El prototipo consta de una sola pantalla que tiene un rectángulo café emulando una mesa, con siete ministros alrededor representados por círculos. Sobre la mesa hay ocho botones que representan cada proyecto. Los puestos de los ministros están nominados según su posición relativa a la mesa; a las 12 está el puesto `A`, y luego siguen secuencialmente en la dirección de las manillas del reloj. Los ministros y los proyectos están etiquetados por color, de tal forma que su alineamiento sea inmediatamente distinguible. Al proponer un proyecto se registran los votos de cada uno de los ministros en una sección a la derecha de la mesa.
 
 ![Prototipo 1 c/ anotaciones](MiscArt/Prototipo%201.png)
 
-El jugador gana cuando logra hacer **tres proyectos de cada tipo**, _i.e._ tres proyectos económicos, tres humanistas, y tres patriotas.  Por otro lado, el jugador pierde cuando se llena [cordura](#mecánicas) de cada uno de sus ministros.
+El jugador gana cuando logra hacer **tres proyectos de cada tipo**, _i.e._ tres proyectos económicos, tres humanistas, y tres patriotas.  Por otro lado, el jugador pierde cuando **se llena completamente** la barra de [cordura](#mecánicas) de todos sus ministros.
 
 <!--¿Y cómo pierdo?-->
 
