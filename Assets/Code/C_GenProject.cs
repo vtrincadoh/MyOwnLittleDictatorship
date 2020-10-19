@@ -67,7 +67,7 @@ public class C_GenProject : MonoBehaviour
         }
         foreach(var i in ListaAElegir)
         {
-            Debug.Log("There is " + i);
+            //Debug.Log("There is " + i);
         }
         int a = 0;
         foreach(GameObject button in bProject)

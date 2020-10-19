@@ -85,16 +85,16 @@ public class C_Phase : MonoBehaviour
     public void phase4(GameObject m)
     {
         //Change or Adoctrinate
-        Debug.Log("Changing");
+        //Debug.Log("Changing");
         if(m.name == "Skip")
         {
             Debug.Log("Skipped vote");
         }
         else
         {
-            Debug.Log("Changing minister " + m.name);
+            //Debug.Log("Changing minister " + m.name);
             m.GetComponent<C_Minister>().GenerateChar();
-            Debug.Log("Now is " + m.GetComponent<C_Minister>().ministerName + " of " + m.GetComponent<C_Minister>().myAlineacion);
+            //Debug.Log("Now is " + m.GetComponent<C_Minister>().ministerName + " of " + m.GetComponent<C_Minister>().myAlineacion);
         }
         DisableMinisterButtons();
         Invoke("ChangeBool", 5f);

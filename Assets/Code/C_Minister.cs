@@ -13,6 +13,7 @@ public class C_Minister : MonoBehaviour
     public Tipos.alineacion myAlineacion;
     public Puestos.puestos myPuesto;
     public float sanity,rateOfSanityRecovery, rateOfSanityLost;
+    public bool Force;
 
     private void Start()
     {
@@ -42,8 +43,8 @@ public class C_Minister : MonoBehaviour
 
     private void setAlination()
     {
-        int i = Random.Range(0, 2);
-        Debug.Log("For " + gameObject.name + " is " + i);
+        int i = Random.Range(0, 3);
+        Debug.Log("For " + ministerName + " is " + i);
         switch (i)
         {
             case 0:
