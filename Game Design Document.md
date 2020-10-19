@@ -43,7 +43,7 @@ El objetivo de este primer prototipo es descubrir y probar el _core loop_, imple
 
 El prototipo consta de una sola pantalla que tiene un rectángulo café emulando una mesa, con siete ministros alrededor representados por círculos. Sobre la mesa hay ocho botones que representan cada proyecto. Los puestos de los ministros están nominados según su posición relativa a la mesa; a las 12 está el puesto `A`, y luego siguen secuencialmente en la dirección de las manillas del reloj. Los ministros y los proyectos están etiquetados por color, de tal forma que su alineamiento sea inmediatamente distinguible.
 
-![Prototipo 1 c/ anotaciones](.\MiscArt\Prototipo 1.png)
+![Prototipo 1 c/ anotaciones](MiscArt\Prototipo 1.png)
 
 El jugador gana cuando logra hacer **tres proyectos de cada tipo**, _i.e._ tres proyectos económicos, tres humanistas, y tres patriotas.
 
