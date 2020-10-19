@@ -28,6 +28,7 @@ public class C_GenProject : MonoBehaviour
 
     public void DisableButtons()
     {
+        //Disable button
         foreach(GameObject b in bProject)
         {
             b.SetActive(false);
@@ -36,6 +37,7 @@ public class C_GenProject : MonoBehaviour
 
     public void EnableButtons()
     {
+        //Enable button
         foreach (GameObject b in bProject)
         {
             b.SetActive(true);
@@ -45,11 +47,6 @@ public class C_GenProject : MonoBehaviour
     public void GenerateProject() //Instanciar el Prefab con alineación
     {
         alineacion domType = DominantType;
-        /*var choosableTypes = Enum
-    .GetValues(typeof(alineacion))
-    .Cast<alineacion>()
-    .Where(item => item != domType)
-    .ToArray(); *///Hacer un cambio a listas con distintos toamaños donde poseean la catindad de alineaciones a seleccionar
         alineacion[] ListaAElegir = new alineacion[bProject.Count()];
         int cantDom = 0;
         for(int x = 0; x < bProject.Count(); x++)
@@ -68,11 +65,6 @@ public class C_GenProject : MonoBehaviour
             }
             ListaAElegir[x] = adding;
         }
-        /*
-        GameObject newProject = Instantiate(prefabProject);
-        newProject.GetComponent<C_Project>().projectAl = choosableTypes[(int)UnityEngine.Random.value];
-        */
-        //New form
         foreach(var i in ListaAElegir)
         {
             Debug.Log("There is " + i);
@@ -81,10 +73,11 @@ public class C_GenProject : MonoBehaviour
         foreach(GameObject button in bProject)
         {
             button.GetComponent<C_Project>().projectName = SetName();
-            button.GetComponent<C_Project>().projectAl = ListaAElegir[a]; //choosableTypes[(int)UnityEngine.Random.value];
+            button.GetComponent<C_Project>().projectAl = ListaAElegir[a];
             a++;
             switch (button.GetComponent<C_Project>().projectAl)
             {
+                //Asign color to proyect button
                 case alineacion.Economico:
                     button.GetComponent<Image>().color = Color.green;
                     break;
@@ -99,6 +92,7 @@ public class C_GenProject : MonoBehaviour
                     break;
             }
             if(DominantType == button.GetComponent<C_Project>().projectAl){
+                //Block button of dominant type
                 button.GetComponent<Image>().color = Color.black;
                 button.GetComponent<Button>().interactable = false;
             }
@@ -108,12 +102,11 @@ public class C_GenProject : MonoBehaviour
 
     private string SetName()
     {
+        //Generate contruction name
         string b = building[UnityEngine.Random.Range(0, building.Count)];
         string bN = buldingName[UnityEngine.Random.Range(0, buldingName.Count)];
         string constructionName = string.Format("{0} of {1}", b, bN);
-        //Debug.Log(constructionName);
         return (constructionName);
-        //For tipe, it could be recieve setname(Alineacion) and having diferent list of names for each alineacion
     }
 
     public alineacion DominantType //Alineación mayor de la mesa

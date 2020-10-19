@@ -60,7 +60,6 @@ public class C_Minister : MonoBehaviour
     public bool AskVote(Tipos.alineacion alineacionProyecto)
     {
         bool descision;
-        //Debug.Log("Comparation is " + alineacionProyecto + "with" + myAlineacion);
         if (alineacionProyecto == myAlineacion)
         {
             descision = true;
@@ -76,10 +75,6 @@ public class C_Minister : MonoBehaviour
 
     private bool RandomBool()
     {
-        /*int val = Random.Range(0, 10);
-        Debug.Log("Val es " + val);
-        if (val <= 4) return false;
-        else return true;*/
         return (Random.value > 0.5f);
     }
 }
