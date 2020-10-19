@@ -45,7 +45,7 @@ El prototipo consta de una sola pantalla que tiene un rectángulo café emulando
 
 ![Prototipo 1 c/ anotaciones](MiscArt/Prototipo%201.png)
 
-El jugador gana cuando logra hacer **tres proyectos de cada tipo**, _i.e._ tres proyectos económicos, tres humanistas, y tres patriotas.  Por otro lado, el jugador pierde cuando (...).
+El jugador gana cuando logra hacer **tres proyectos de cada tipo**, _i.e._ tres proyectos económicos, tres humanistas, y tres patriotas.  Por otro lado, el jugador pierde cuando se llena [cordura](#mecánicas) de cada uno de sus ministros.
 
 <!--¿Y cómo pierdo?-->
 
