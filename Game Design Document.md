@@ -10,16 +10,16 @@ Vicente Trincado
 Sebastián Meneses
 
 
-# Tabla de contenidos
+# 1. Tabla de contenidos
 [TOC]
 
-# Pitch
+# 1. Pitch
 Eres un dictador y añoras que tu pueblo te idolatre. Para esto, realizarás proyectos y modificaras tu gabinete para que no obstaculicen tu objetivo.
 
-# Descripción General
+# 2. Descripción General
 Eres un dictador que tiene como objetivo ser idolatrado por su gente, por lo que el jugador realizará distintos proyectos con este fin. El problema es que tu gabinete de ministros podrá oponerse a tus decisiones, por lo que puedes realizar distintas acciones para evitar estos impedimentos (cada acción tendrá su propia consecuencia). Ganar significa realizar una cantidad de proyectos, lo que hará finalmente que tu pueblo te idolatre, mientras que perderás si todos tus ministros se rebelan contra ti.
 
-# Jugabilidad y Mecánicas
+# 3. Jugabilidad y Mecánicas
 ## Jugabilidad
 ### _Game Loop_
 * **Fase 1:** El jugador selecciona un proyecto para proponer a sus ministros.
@@ -32,20 +32,20 @@ Eres un dictador que tiene como objetivo ser idolatrado por su gente, por lo que
 *   **Cambiar:**
 *   **Investigar:**
 *   **Proponer Proyecto:** El jugador puede escoger un proyecto de una lista para proponer a sus ministros. Solamente aquellos proyectos que no sean de la alineamiento dominante del gabinete pueden ser propuestos.
-# Historia y Narrativa
-# Niveles y progresión
+# 5. Historia y Narrativa
+# 6. Niveles y progresión
 ## Progresión
-# Interfaces
+# 7. Interfaces
 ## Pantalla principal
 ## Vista ciudad
 ## Proyectos
 ## Listas de ministros
 ## Informe del ministro
 ## Sala principal
-# Propuesta de audio
-# Propuesta Visual
+# 8. Propuesta de audio
+# 9. Propuesta Visual
 El juego tendrá un estilo _low-poly_
-# Bitácora de Iteraciones
+# 10. Bitácora de Iteraciones
 ## Prototipo 1
 El objetivo de este primer prototipo es probar y descubrir el _core loop_, implementando, completando, y desafiando las propuestas de la fase de ideación del proyecto. Se omiten algunas funcionalidades planeadas en virtud del tiempo.
 
@@ -74,9 +74,9 @@ El jugador debe aprobar tres proyectos de cada tipo para ganar, _i.e._ tres proy
   <!--¿Sólo a uno?-->
   <!--¿Reroll o elige alineamiento?-->
 
-# Extras
-# Referencias
-# _Assets_ externos
+# 11. Extras
+# 12. Referencias
+# 13. Assets_ externos
 [JSON .NET For Unity](https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-11347)  
 [Full Menu System](https://assetstore.unity.com/packages/tools/gui/full-menu-system-free-158919)  
 [Voxel Wooden Funiture](https://assetstore.unity.com/packages/3d/props/furniture/voxel-wooden-funiture-67811)  
