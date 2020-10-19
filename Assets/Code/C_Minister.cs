@@ -14,18 +14,20 @@ public class C_Minister : MonoBehaviour
     public Puestos.puestos myPuesto;
     public float sanity,rateOfSanityRecovery, rateOfSanityLost;
     public Text posName;
+    public Slider sanitySlider;
+    public Image myVote;
 
     private void Start()
     {
         GenerateChar();
         posName.text = myPuesto.ToString();
-        sanity = Random.Range(30.5f, 55f);
     }
 
     public void GenerateChar()
     {
         SetName();
         setAlination();
+        sanity = Random.Range(30.5f, 55f);
     }
 
     private void SetName()
@@ -40,6 +42,7 @@ public class C_Minister : MonoBehaviour
     {
         sanity += rateOfSanityRecovery * Time.deltaTime;
         sanity = Mathf.Clamp(sanity, 0f, 100f);
+        sanitySlider.value = sanity;
     }
 
     private void setAlination()
@@ -78,6 +81,8 @@ public class C_Minister : MonoBehaviour
         }
         Debug.LogFormat("Minister {0} with {1} alination voted {2}", ministerName, myAlineacion, descision);
         if (descision) sanity -= rateOfSanityLost;
+        if (descision) myVote.color = Color.green;
+        else myVote.color = Color.red;
         return descision;
     }
 

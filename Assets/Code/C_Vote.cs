@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Tipos;
+using UnityEngine.UI;
 
 public class C_Vote : MonoBehaviour
 {
     public Object[] ministerOnLevel;
     private int yes, no; //Cuántos dijeron que sí y cuántos que no
+    public Image FinalVeredict;
 
     // Start is called before the first frame update
     void Start()
@@ -16,15 +18,30 @@ public class C_Vote : MonoBehaviour
 
     public void InvokeVoting(GameObject proyect)
     {
+        FinalVeredict.color = Color.gray;
         Tipos.alineacion al = proyect.GetComponent<C_Project>().projectAl;
         results(al);
-        if(yes > no) Debug.Log("Se Aprueba"); //Hacer do while
-        else if (yes < no) Debug.Log("Se Rechaza");
+        if (yes > no)
+        {
+            FinalVeredict.color = Color.green;
+            Debug.Log("Se Aprueba");
+        } //Hacer do while
+        else if (yes < no)
+        {
+            FinalVeredict.color = Color.red;
+            Debug.Log("Se Rechaza");
+        }
         else //Si hay empate se repite la votacion
         {
             results(al);
-            if (yes > no) Debug.Log("Se Aprueba");
-            else Debug.Log("Se Rechaza");
+            if (yes > no){
+                FinalVeredict.color = Color.green;
+                Debug.Log("Se Aprueba");
+            }
+            else {
+                FinalVeredict.color = Color.red;
+                Debug.Log("Se Rechaza");
+            }
         }
     }
 
