@@ -49,7 +49,7 @@ _My own little dictatorship_ es un juego de estrategia, donde se espera que el j
 #### Atributos
 
 * **Nombre `name`:** _string_ Nombre del proyecto. _As of_ [Prototipo 1](#prototipo-1) se genera automáticamente. Propósito estético. A futuro estará asociado al alineamiento del proyecto. Ej: "Plaza de la nación", "Estadio del líder supremo", etc.
-* **Nivel:** No implementado aún. Ver [Prorgesión](#6. niveles-y-progresión). <!--Mentira, eso no existe todavía-->
+* **Nivel `level`:** No implementado aún. Ver [Prorgesión](#6. niveles-y-progresión). <!--Mentira, eso no existe todavía-->
 * **Alineamiento `alignment`: **_enum_ Tipo de proyecto. Asociado a las preferencias de los ministros. Para más información ver <!--¿Ver qué?-->.
 
 # 4. Historia y Narrativa
