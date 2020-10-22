@@ -12,6 +12,8 @@ public class C_Phase : MonoBehaviour
     private bool winConditionMeet = false; //Meet the win condition
     private bool lostConditionMeet = false; //Meet the loss condition
     public GameObject[] minister; //Group of ministers in game
+    private int donePatriotic, doneHumanista, doneEconomic; //Contador proyectos aprobados
+    public Image FinalVeredict; //Final aproval of proyect
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class C_Phase : MonoBehaviour
         generator = gameObject.GetComponent<C_GenProject>();
         voting = gameObject.GetComponent<C_Vote>();
         minister = GameObject.FindGameObjectsWithTag("Minister");
+        doneEconomic = doneHumanista = donePatriotic = 0;
     }
 
     private void CheckSanity() //Check if everybody is insane or theres still insanity in ministers
@@ -69,6 +72,7 @@ public class C_Phase : MonoBehaviour
 
     public void phase1()
     {
+        Debug.Log(string.Format("Actually you have {0} economic, {1} humanist and {2} patriotic proyects approved", doneEconomic, doneHumanista, donePatriotic));
         DisableMinisterButtons();
         //Generate proyects
         Debug.Log("Generating");
@@ -81,6 +85,22 @@ public class C_Phase : MonoBehaviour
         //Voting phase
         Debug.Log("Voting");
         voting.InvokeVoting(button);
+        if(FinalVeredict.color == Color.green)
+        {
+            alineacion align = button.GetComponent<C_Project>().projectAl;
+            switch (align)
+            {
+                case alineacion.Economico:
+                    doneEconomic++;
+                    break;
+                case alineacion.Humanista:
+                    doneHumanista++;
+                    break;
+                case alineacion.Patriota:
+                    donePatriotic++;
+                    break;
+            }
+        }
         generator.DisableButtons();
         Invoke("phase3",5f);
     }
@@ -109,6 +129,7 @@ public class C_Phase : MonoBehaviour
         }
         DisableMinisterButtons();
         Invoke("ChangeBool", 5f);
+        if (doneEconomic >= 2 && doneHumanista >= 2 && donePatriotic >= 2) winConditionMeet = true;
     }
 
     void ChangeBool()

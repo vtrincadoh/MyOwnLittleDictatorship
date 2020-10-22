@@ -1911,6 +1911,7 @@ MonoBehaviour:
   generator: {fileID: 0}
   voting: {fileID: 0}
   minister: []
+  FinalVeredict: {fileID: 267054319}
 --- !u!1 &423446433
 GameObject:
   m_ObjectHideFlags: 0
