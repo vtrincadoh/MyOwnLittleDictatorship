@@ -102,7 +102,7 @@ public class C_Phase : MonoBehaviour
             }
         }
         generator.DisableButtons();
-        Invoke("phase3",5f);
+        Invoke("phase3", 2f);
     }
 
     public void phase3()
@@ -128,7 +128,7 @@ public class C_Phase : MonoBehaviour
             //Debug.Log("Now is " + m.GetComponent<C_Minister>().ministerName + " of " + m.GetComponent<C_Minister>().myAlineacion);
         }
         DisableMinisterButtons();
-        Invoke("ChangeBool", 5f);
+        Invoke("ChangeBool", 2f);
         if (doneEconomic >= 2 && doneHumanista >= 2 && donePatriotic >= 2) winConditionMeet = true;
     }
 
