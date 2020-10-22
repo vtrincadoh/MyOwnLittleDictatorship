@@ -41,14 +41,21 @@ _My own little dictatorship_ es un juego de estrategia, donde se espera que el j
 #### Atributos
 
 * **Nombre `name`:** _string_ Nombre y apellido del ministro. Generados aleatoriamente junto con el ministro. Su propósito es únicamente estético, no afecta la funcionalidad. Ej: "Roberto Perez".
-* **Puesto `seat`:** _enum_ Posición del ministro relativo a la mesa. Los enumeradores son letras mayúsculas que siguen la secuencia `A, B, C, ...`. A las 12 está el puesto `A`, y luego siguen secuencialmente en la dirección de las manillas del reloj. _As of_ [Prototipo 1](#prototipo-1) su propósito es de organización interna.
+
+* **Puesto `seat`:** _enum_ Posición del ministro relativo a la mesa. Los enumeradores son letras mayúsculas que siguen la secuencia `A, B, C, ...`. A las 12 está el puesto `A`, y luego siguen secuencialmente en la dirección de las manillas del reloj. _A la fecha[\*](#9.1.-prototipo-1---Oct-w3)_, su propósito es de organización interna.
+
 * **Cordura `sanity`:** _float_ Porcentaje que determina qué tan cuerdo es el ministro. El jugador pierde cuando todos [WIP] los ministros alcanzan el máximo de su cordura, por lo que el jugador siempre querrá mantener sus ministros lo menos cuerdos posible. Al generar un ministro, este inicia con un valor de cordura aleatorio entre 35-55% [WIP].
+
 * **Alineamiento `alignment`:** _enum_ Preferencia de votación del ministro. Para más información ver <!--¿Ver qué?-->.
+
+#### Métodos
+* **Votar `Vote`:** _void_ Ministro vota respecto a la propuesta de proyecto. Si el proyecto es del mismo alineamiento del ministro, éste se aprueba automáticamente. _A la fecha[\*](#9.1.-prototipo-1---Oct-w3)_, si el proyecto no es del mismo alineamiento el ministro voltea una moneda.
+
 ### Proyecto
 
 #### Atributos
 
-* **Nombre `name`:** _string_ Nombre del proyecto. _As of_ [Prototipo 1](#prototipo-1) se genera automáticamente. Propósito estético. A futuro estará asociado al alineamiento del proyecto. Ej: "Plaza de la nación", "Estadio del líder supremo", etc.
+* **Nombre `name`:** _string_ Nombre del proyecto. _A la fecha[\*](#9.1.-prototipo-1---Oct-w3)_, se genera automáticamente. Propósito estético. A futuro estará asociado al alineamiento del proyecto. Ej: "Plaza de la nación", "Estadio del líder supremo", etc.
 * **Nivel `level`:** No implementado aún. Ver [Prorgesión](#6. niveles-y-progresión). <!--Mentira, eso no existe todavía-->
 * **Alineamiento `alignment`: **_enum_ Tipo de proyecto. Asociado a las preferencias de los ministros. Para más información ver <!--¿Ver qué?-->.
 
