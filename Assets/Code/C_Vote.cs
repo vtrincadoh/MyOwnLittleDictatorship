@@ -43,6 +43,12 @@ public class C_Vote : MonoBehaviour
                 Debug.Log("Se Rechaza");
             }
         }
+        Invoke("ResetColor", 3f);
+    }
+
+    public void ResetColor()
+    {
+        FinalVeredict.color = Color.gray;
     }
 
     void results(Tipos.alineacion alin) //cuenta de votos
