@@ -40,7 +40,7 @@ _My own little dictatorship_ es un juego de estrategia, donde se espera que el j
 ### Ministro
 #### Atributos
 
-* **Nombre `name`:** _string_ Nombre y apellido del ministro. Generados aleatoriamente junto con el ministro. Su propósito es únicamente estético, no afecta la funcionalidad. Ej: "Roberto Perez".
+* **Nombre `name`:** _string_ Nombre y apellido del ministro. Generados aleatoriamente junto con el ministro. Su propósito es únicamente estético, no afecta la funcionalidad. Ej: "Roberto Pérez".
 
 * **Puesto `seat`:** _enum_ Posición del ministro relativo a la mesa. Los enumeradores son letras mayúsculas que siguen la secuencia `A, B, C, ...`. A las 12 está el puesto `A`, y luego siguen secuencialmente en la dirección de las manillas del reloj. _A la fecha[\*](#9.1.-prototipo-1---Oct-w3)_, su propósito es de organización interna.
 
@@ -73,7 +73,7 @@ El prototipo consta de una sola pantalla que tiene un rectángulo café emulando
 
 ![Prototipo 1 c/ anotaciones](MiscArt/Prototipo%201.png)
 
-El jugador gana cuando logra hacer **tres proyectos de cada tipo**, _i.e._ tres proyectos económicos, tres humanistas, y tres patriotas.  Por otro lado, el jugador pierde cuando **se llena completamente** la barra de [cordura](#ministro) de todos sus ministros.
+El jugador gana cuando logra hacer **dos proyectos de cada tipo**, _i.e._ dos proyectos económicos, dos humanistas, y dos patriotas.  Por otro lado, el jugador pierde cuando **se llena completamente** la barra de [cordura](#ministro) de todos sus ministros.
 
 <!--No me convece-->
 
