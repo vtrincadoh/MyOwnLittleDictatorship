@@ -8,6 +8,7 @@ public class C_Phase : MonoBehaviour
 {
     public C_GenProject generator; //Script for generating proyects
     public C_Vote voting; //Script for voting
+    public GameObject endScreen; //Shows when you win/lost
     private bool proyectsGenerated = false; //Started new generated proyects
     private bool winConditionMeet = false; //Meet the win condition
     private bool lostConditionMeet = false; //Meet the loss condition
@@ -50,17 +51,23 @@ public class C_Phase : MonoBehaviour
         }
     }
 
+    private void EndGame(string Condition) //Manages the game end
+    {
+        endScreen.SetActive(true);
+        endScreen.GetComponent<C_PauseMenuManager>().ChangeText(Condition);
+    }
+
     private void Update()
     {
         if (winConditionMeet)
         {
             Debug.Log("You win");
-            Application.Quit();
+            EndGame("You win");
         }
         else if (lostConditionMeet)
         {
             Debug.Log("You lost");
-            Application.Quit();
+            EndGame("You lost");
         }
         else if (!proyectsGenerated)
         {
