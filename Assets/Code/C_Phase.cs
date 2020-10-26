@@ -14,6 +14,7 @@ public class C_Phase : MonoBehaviour
     private bool lostConditionMeet = false; //Meet the loss condition
     public GameObject[] minister; //Group of ministers in game
     private int donePatriotic, doneHumanista, doneEconomic; //Contador proyectos aprobados
+    public Text aPatriotic, aHumanist, aEconomic; //Contador visual para los proyectos
     public Image FinalVeredict; //Final aproval of proyect
 
     // Start is called before the first frame update
@@ -108,6 +109,11 @@ public class C_Phase : MonoBehaviour
                     break;
             }
         }
+        //Asignando valores para visualizar
+        aPatriotic.text = donePatriotic.ToString();
+        aEconomic.text = doneEconomic.ToString();
+        aHumanist.text = doneHumanista.ToString();
+
         generator.DisableButtons();
         Invoke("phase3", 1f);
     }
