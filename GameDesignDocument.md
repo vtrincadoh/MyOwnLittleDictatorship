@@ -13,16 +13,13 @@ Sebastián Meneses
 # Tabla de contenidos
 [TOC]
 
-# 1. Pitch
-Eres un dictador y añoras que tu pueblo te idolatre. Para esto, realizarás proyectos y modificaras tu gabinete para que no obstaculicen tu objetivo.
-
 # 2. Descripción General
 Eres un dictador que tiene como objetivo ser idolatrado por su gente, por lo que el jugador realizará distintos proyectos con este fin. El problema es que tu gabinete de ministros podrá oponerse a tus decisiones, por lo que puedes realizar distintas acciones para evitar estos impedimentos (cada acción tendrá su propia consecuencia). Ganar significa realizar una cantidad de proyectos, lo que hará finalmente que tu pueblo te idolatre, mientras que perderás si todos tus ministros se rebelan contra ti.
 
 # 3. Jugabilidad y Mecánicas
 ## 3.1. _Core Gameplay_
 
-_My own little dictatorship_ es un juego de estrategia, donde se espera que el jugador adquiera la habilidad de modificar constantemente un gabinete de ministros con el propósito de mejorar sus posibilidades de aprobar un proyecto de gobierno. El *Core Loop* se divide principalmente en cuatro etapas:
+_My own little dictatorship_ es un juego de comedia y estrategia, donde se espera que el jugador adquiera la habilidad de modificar constantemente un gabinete de ministros con el propósito de mejorar sus posibilidades de aprobar un proyecto de gobierno. El *Core Loop* se divide principalmente en cuatro etapas:
 
 * **Etapa 1:** El jugador selecciona un proyecto para proponer a sus ministros.
 * **Etapa 2:** Los ministros votan por la aprobación de la propuesta.
@@ -75,11 +72,9 @@ El prototipo consta de una sola pantalla que tiene un rectángulo café emulando
 
 El jugador gana cuando logra hacer **dos proyectos de cada tipo**, _i.e._ dos proyectos económicos, dos humanistas, y dos patriotas.  Por otro lado, el jugador pierde cuando **se llena completamente** la barra de [cordura](#ministro) de todos sus ministros.
 
-<!--No me convece-->
-
 * **Etapa 0:**  
-  Se generan **7 ministros**, con nombres y alineaciones aleatorios.
-  Se generan además **8 proyectos** aleatoriamente de todas las alineaciones. Aquellos que sean de la misma alineamiento que la alineamiento dominante del gabinete son inelegibles. Ej: Si 4/7 ministros son económicos, entonces los proyectos de tipo económicos no son elegibles.
+  Se generan **7 ministros**, con nombres y alineamientos aleatorios.
+  Se generan además **8 proyectos** aleatoriamente de todas las alineamientos. Aquellos que sean de la misma alineamiento que la alineamiento dominante del gabinete son inelegibles. Ej: Si 4/7 ministros son económicos, entonces los proyectos de tipo económicos no son elegibles.
   
 * **Etapa 1:**  
   El jugador escoge el proyecto que desea proponer.
@@ -93,8 +88,6 @@ El jugador gana cuando logra hacer **dos proyectos de cada tipo**, _i.e._ dos pr
 
 * **Etapa 4:**  
   El jugador cambia a solo uno de los ministros si así lo desea. Al cambiar un ministro se hace un _reroll_ y se decide aleatoriamente el nuevo alineamiento. En este prototipo no existe la mecánica de [adoctrinar](#mecánicas).
-  <!--¿Sólo a uno?-->
-  <!--¿Reroll o elige alineamiento?-->
 
 # 10. Extras
 # 11. Referencias
