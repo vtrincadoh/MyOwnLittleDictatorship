@@ -17,6 +17,10 @@ public class C_Phase : MonoBehaviour
     public Text aPatriotic, aHumanist, aEconomic; //Contador visual para los proyectos
     public Image FinalVeredict; //Final aproval of proyect
 
+
+    [Range(0.0f, 10.0f)] public float victoryPointsVal;
+    public Slider victoryPoints;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +64,7 @@ public class C_Phase : MonoBehaviour
 
     private void Update()
     {
+        victoryPoints.value = victoryPointsVal;
         if (winConditionMeet)
         {
             Debug.Log("You win");

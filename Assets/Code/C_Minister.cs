@@ -40,9 +40,9 @@ public class C_Minister : MonoBehaviour
 
     private void Update()
     {
-        sanity += rateOfSanityRecovery * Time.deltaTime;
-        sanity = Mathf.Clamp(sanity, 0f, 100f);
-        sanitySlider.value = sanity;
+        //sanity += rateOfSanityRecovery * Time.deltaTime;
+        //sanity = Mathf.Clamp(sanity, 0f, 100f);
+        //sanitySlider.value = sanity;
     }
 
     private void setAlination()
