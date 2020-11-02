@@ -21,12 +21,12 @@ public class C_Vote : MonoBehaviour
         FinalVeredict.color = Color.gray;
         Tipos.alineacion al = proyect.GetComponent<C_Project>().projectAl;
         results(al);
-        if (yes > no)
+        if (yes > 5)
         {
             FinalVeredict.color = Color.green;
             Debug.Log("Se Aprueba");
         } //Hacer do while
-        else if (yes < no)
+        else if (yes < 5)
         {
             FinalVeredict.color = Color.red;
             Debug.Log("Se Rechaza");
@@ -34,7 +34,7 @@ public class C_Vote : MonoBehaviour
         else //Si hay empate se repite la votacion
         {
             results(al);
-            if (yes > no){
+            if (yes > 5){
                 FinalVeredict.color = Color.green;
                 Debug.Log("Se Aprueba");
             }
