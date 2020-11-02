@@ -43,6 +43,8 @@ public class C_Vote : MonoBehaviour
                 Debug.Log("Se Rechaza");
             }
         }
+        yes = 0;
+        no = 0;
         Invoke("ResetColor", 3f);
     }
 
