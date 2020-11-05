@@ -8,6 +8,7 @@ public class C_Phase : MonoBehaviour
 {
     public C_GenProject generator; //Script for generating proyects
     public C_Vote voting; //Script for voting
+    public C_EnemyBehavior enemy; //Script from enemy
     public GameObject endScreen; //Shows when you win/lost
     private bool proyectsGenerated = false; //Started new generated proyects
     private bool winConditionMeet = false; //Meet the win condition
@@ -18,9 +19,9 @@ public class C_Phase : MonoBehaviour
     public Image FinalVeredict; //Final aproval of proyect
 
 
-    [Range(0.0f, 10.0f)] public float victoryPointsVal;
+    [Range(0.0f, 10.0f)] public int victoryPointsVal;
     public Slider victoryPoints;
-    [Range(0.0f, 10.0f)] public float ResourcePointsVal;
+    [Range(0.0f, 10.0f)] public int ResourcePointsVal;
     public Slider ResourcePoints;
 
     public Button attackButton;
@@ -147,7 +148,7 @@ public class C_Phase : MonoBehaviour
         }
         else if(m.name == "attack")
         {
-            if (victoryPoints.value % 1 == 0 && victoryPoints.value != 0) attackFuction();
+            if (victoryPoints.value != 0) attackFuction();
             DisableMinisterButtons();
             Invoke("ChangeBool", 2f);
         }
@@ -177,14 +178,14 @@ public class C_Phase : MonoBehaviour
                 {
                     Debug.Log("Final type is " + m.GetComponent<C_Minister>().myAlineacion);
                     DisableMinisterButtons();
-                    Invoke("ChangeBool", 2f);
+                    Invoke("ChangeBool", 1f);
                 }
             }
             else
             {
                 m.GetComponent<C_Minister>().GenerateChar();
                 DisableMinisterButtons();
-                Invoke("ChangeBool", 2f);
+                Invoke("ChangeBool", 1f);
             }
         }
         if (victoryPoints.value == 10) winConditionMeet = true;
@@ -192,12 +193,15 @@ public class C_Phase : MonoBehaviour
 
     void attackFuction()
     {
+        enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal--;
+        Mathf.Clamp(enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal,0,10);
         ResourcePoints.value -= 1;
         Debug.Log("Attacking");
     }
 
     void ChangeBool()
     {
+        enemy.EnemyTurn();
         proyectsGenerated = !proyectsGenerated;
     }
 }
