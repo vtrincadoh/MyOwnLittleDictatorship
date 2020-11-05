@@ -20,6 +20,10 @@ public class C_Phase : MonoBehaviour
 
     [Range(0.0f, 10.0f)] public float victoryPointsVal;
     public Slider victoryPoints;
+    [Range(0.0f, 10.0f)] public float ResourcePointsVal;
+    public Slider ResourcePoints;
+
+    public Button attackButton;
 
     // Start is called before the first frame update
     void Start()
@@ -64,7 +68,7 @@ public class C_Phase : MonoBehaviour
 
     private void Update()
     {
-        victoryPoints.value = victoryPointsVal;
+        victoryPoints.value += victoryPointsVal;
         if (winConditionMeet)
         {
             Debug.Log("You win");
@@ -87,6 +91,7 @@ public class C_Phase : MonoBehaviour
     {
         Debug.Log(string.Format("Actually you have {0} economic, {1} humanist and {2} patriotic proyects approved", doneEconomic, doneHumanista, donePatriotic));
         DisableMinisterButtons();
+        attackButton.interactable = false;
         //Generate proyects
         Debug.Log("Generating");
         generator.EnableButtons();
@@ -128,6 +133,7 @@ public class C_Phase : MonoBehaviour
         //Review results
         Debug.Log("Reviewing");
         EnableMinisterButtons();
+        attackButton.interactable = true;
         //Get dominant type and compare with proyect type
     }
 
@@ -139,15 +145,55 @@ public class C_Phase : MonoBehaviour
         {
             Debug.Log("Skipped vote");
         }
+        else if(m.name == "attack")
+        {
+            if (victoryPoints.value % 1 == 0 && victoryPoints.value != 0) attackFuction();
+            DisableMinisterButtons();
+            Invoke("ChangeBool", 2f);
+        }
         else
         {
-            //Debug.Log("Changing minister " + m.name);
-            m.GetComponent<C_Minister>().GenerateChar();
-            //Debug.Log("Now is " + m.GetComponent<C_Minister>().ministerName + " of " + m.GetComponent<C_Minister>().myAlineacion);
+            if (voting.canChooseMinisterType)
+            {
+                //Player chooses type
+                Debug.Log("Choosing type");
+                
+                if (Input.GetKey("a")) {
+                    Debug.Log("Pressed a");
+                    m.GetComponent<C_Minister>().myAlineacion = alineacion.Economico;
+                    voting.canChooseMinisterType = false;
+                }
+                else if (Input.GetKey(KeyCode.B)) {
+                    Debug.Log("Pressed b");
+                    m.GetComponent<C_Minister>().myAlineacion = alineacion.Patriota;
+                    voting.canChooseMinisterType = false;
+                }
+                else if (Input.GetKey(KeyCode.C)){
+                    Debug.Log("Pressed c");
+                    m.GetComponent<C_Minister>().myAlineacion = alineacion.Humanista;
+                    voting.canChooseMinisterType = false;
+                }
+                if (!voting.canChooseMinisterType)
+                {
+                    Debug.Log("Final type is " + m.GetComponent<C_Minister>().myAlineacion);
+                    DisableMinisterButtons();
+                    Invoke("ChangeBool", 2f);
+                }
+            }
+            else
+            {
+                m.GetComponent<C_Minister>().GenerateChar();
+                DisableMinisterButtons();
+                Invoke("ChangeBool", 2f);
+            }
         }
-        DisableMinisterButtons();
-        Invoke("ChangeBool", 1f);
-        if (doneEconomic >= 2 && doneHumanista >= 2 && donePatriotic >= 2) winConditionMeet = true;
+        if (victoryPoints.value == 10) winConditionMeet = true;
+    }
+
+    void attackFuction()
+    {
+        ResourcePoints.value -= 1;
+        Debug.Log("Attacking");
     }
 
     void ChangeBool()
