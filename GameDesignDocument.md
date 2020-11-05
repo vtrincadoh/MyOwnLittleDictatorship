@@ -13,35 +13,50 @@ Sebastián Meneses
 # Tabla de contenidos
 [TOC]
 
-# 2. Descripción General
+# Descripción General
 Eres un dictador que tiene como objetivo ser idolatrado por su gente, por lo que el jugador realizará distintos proyectos con este fin. El problema es que tu gabinete de ministros podrá oponerse a tus decisiones, por lo que puedes realizar distintas acciones para evitar estos impedimentos (cada acción tendrá su propia consecuencia). Ganar significa realizar una cantidad de proyectos, lo que hará finalmente que tu pueblo te idolatre, mientras que perderás si todos tus ministros se rebelan contra ti.
 
-# 3. Jugabilidad y Mecánicas
-## 3.1. _Core Gameplay_
+# Jugabilidad y Mecánicas
+## _Core Gameplay_
 
 _My own little dictatorship_ es un juego de comedia y estrategia, donde se espera que el jugador adquiera la habilidad de modificar constantemente un gabinete de ministros con el propósito de mejorar sus posibilidades de aprobar un proyecto de gobierno. El *Core Loop* se divide principalmente en cuatro etapas:
 
 * **Etapa 1:** El jugador selecciona un proyecto para proponer a sus ministros.
 * **Etapa 2:** Los ministros votan por la aprobación de la propuesta.
 * **Etapa 3:** El jugador analiza los resultados de la votación y decide qué cambios debe hacer a su gabinete.
-* **Etapa 4:** El jugador reforma o cambia a sus ministros.
-## 3.2. Mecánicas
+* **Etapa 4:** El jugador cambia a sus ministros.
+## Mecánicas
 * **Proponer Proyecto:** El jugador puede escoger un proyecto de una lista para proponer a sus ministros. Solamente aquellos proyectos que no sean del alineamiento dominante del gabinete pueden ser propuestos.
 
-* **Reformar `reform`:** _a.k.a. Adoctrinar_. Modifica a un ministro sin cambiarlo por otro [WIP].
+<!--* **Reformar `reform`:** _a.k.a. Adoctrinar_. Modifica a un ministro sin cambiarlo por otro [WIP].-->
 
 * **Cambiar:** Elimina a uno de los ministros de un puesto, y lo cambia por otro con un alineamiento distinto.
 
+### Efectos de proyecto
 
-## 3.3. Unidades
+  * **Patriota:** Al aprobar un proyecto patriota tienes la opción de adquirir un punto de victoria, o de consumir un punto de armamento para atacar al enemigo y disminuir en una unidad sus puntos de victoria.
+  * **Humanista:** Al aprobar un proyecto humanista adquieres por un turno la habilidad de escoger por qué tipo de ministro deseas cambiar en la fase 4.
+  * **Económico:** Al aprobar este proyecto adquieres un punto de armamento.
+
+
+## Unidades
+### Jugador
+
+#### Atributos
+
+* **Puntos de victoria:** _int_ Necesario para ganar. Se obtiene aprobando proyectos patriotas.
+* **Puntos de armamento:** _int_ Necesario para atacar. Se obtiene aprobando proyectos económicos, y se consume atacando.
+* **Proyectos aprobados:** Cantidad de proyectos aprobados, ordenados por alineamiento de proyecto.
+
 ### Ministro
+
 #### Atributos
 
 * **Nombre `name`:** _string_ Nombre y apellido del ministro. Generados aleatoriamente junto con el ministro. Su propósito es únicamente estético, no afecta la funcionalidad. Ej: "Roberto Pérez".
 
 * **Puesto `seat`:** _enum_ Posición del ministro relativo a la mesa. Los enumeradores son letras mayúsculas que siguen la secuencia `A, B, C, ...`. A las 12 está el puesto `A`, y luego siguen secuencialmente en la dirección de las manillas del reloj. _A la fecha[\*](#9.1.-prototipo-1---Oct-w3)_, su propósito es de organización interna.
 
-* **Cordura `sanity`:** _float_ Porcentaje que determina qué tan cuerdo es el ministro. El jugador pierde cuando todos [WIP] los ministros alcanzan el máximo de su cordura, por lo que el jugador siempre querrá mantener sus ministros lo menos cuerdos posible. Al generar un ministro, este inicia con un valor de cordura aleatorio entre 35-55% [WIP].
+* **[Obsoleto] Cordura `sanity`:** _float_ Porcentaje que determina qué tan cuerdo es el ministro. El jugador pierde cuando todos [WIP] los ministros alcanzan el máximo de su cordura, por lo que el jugador siempre querrá mantener sus ministros lo menos cuerdos posible. Al generar un ministro, este inicia con un valor de cordura aleatorio entre 35-55%.
 
 * **Alineamiento `alignment`:** _enum_ Preferencia de votación del ministro. Para más información ver <!--¿Ver qué?-->.
 
@@ -56,13 +71,13 @@ _My own little dictatorship_ es un juego de comedia y estrategia, donde se esper
 * **Nivel `level`:** No implementado aún. Ver [Prorgesión](#6. niveles-y-progresión). <!--Mentira, eso no existe todavía-->
 * **Alineamiento `alignment`: **_enum_ Tipo de proyecto. Asociado a las preferencias de los ministros. Para más información ver <!--¿Ver qué?-->.
 
-# 4. Historia y Narrativa
-# 5. Niveles y progresión
-# 6. Interfaces
-# 7. Propuesta de audio
-# 8. Propuesta Visual
+# <!--Historia y Narrativa-->
+# <!--Niveles y progresión-->
+# <!--Interfaces-->
+# <!--Propuesta de audio-->
+# Propuesta Visual
 El juego tendrá un estilo _low-poly_
-# 9. Bitácora de Iteraciones
+# Bitácora de Iteraciones
 ## 9.1. Prototipo 1 - Oct w3
 El objetivo de este primer prototipo es descubrir y probar el _core loop_, implementando, completando, y desafiando las ideas propuestas en la fase inicial del proyecto. Se omiten algunas funciones planeadas en virtud del tiempo.
 
@@ -87,11 +102,11 @@ El jugador gana cuando logra hacer **dos proyectos de cada tipo**, _i.e._ dos pr
   El jugador analiza los resultados de la votación e identifica si desea cambiar un ministro. En esta iteración toda la información respecto a la votación es pública.
 
 * **Etapa 4:**  
-  El jugador cambia a solo uno de los ministros si así lo desea. Al cambiar un ministro se hace un _reroll_ y se decide aleatoriamente el nuevo alineamiento. En este prototipo no existe la mecánica de [adoctrinar](#mecánicas).
+  El jugador cambia a solo uno de los ministros si así lo desea. Al cambiar un ministro se hace un _reroll_ y se decide aleatoriamente el nuevo alineamiento.
 
-# 10. Extras
-# 11. Referencias
-# 12. _Assets_ externos
+# Extras
+# Referencias
+# _Assets_ externos
 [JSON .NET For Unity](https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-11347)  
 [Full Menu System](https://assetstore.unity.com/packages/tools/gui/full-menu-system-free-158919)  
 [Voxel Wooden Funiture](https://assetstore.unity.com/packages/3d/props/furniture/voxel-wooden-funiture-67811)  
