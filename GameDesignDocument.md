@@ -32,6 +32,12 @@ _My own little dictatorship_ es un juego de comedia y estrategia, donde se esper
 
 * **Cambiar:** Elimina a uno de los ministros de un puesto, y lo cambia por otro con un alineamiento distinto.
 
+### Efectos de proyecto
+
+  * **Patriota:** Al aprobar un proyecto patriota tienes la opción de adquirir un punto de victoria, o de consumir un punto de armamento para atacar al enemigo y disminuir en una unidad sus puntos de victoria.
+  * **Humanista:** Al aprobar un proyecto humanista adquieres por un turno la habilidad de escoger por qué tipo de ministro deseas cambiar en la fase 4.
+  * **Económico:** Al aprobar este proyecto adquieres un punto de armamento.
+
 
 ## 3.3. Unidades
 ### Ministro
