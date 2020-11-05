@@ -10,10 +10,16 @@ public class C_Vote : MonoBehaviour
     private int yes, no; //Cuántos dijeron que sí y cuántos que no
     public Image FinalVeredict;
 
+    public Slider victorySlider; //Slider for victory and resources points
+    public Slider resourcesSlider;
+
+    public bool canChooseMinisterType;
+
     // Start is called before the first frame update
     void Start()
     {
         ministerOnLevel = GameObject.FindGameObjectsWithTag("Minister");
+        canChooseMinisterType = false;
     }
 
     public void InvokeVoting(GameObject proyect)
@@ -25,6 +31,7 @@ public class C_Vote : MonoBehaviour
         {
             FinalVeredict.color = Color.green;
             Debug.Log("Se Aprueba");
+            PointTypeManager(al);
         } //Hacer do while
         else if (yes < no)
         {
@@ -37,6 +44,7 @@ public class C_Vote : MonoBehaviour
             if (yes > no){
                 FinalVeredict.color = Color.green;
                 Debug.Log("Se Aprueba");
+                PointTypeManager(al);
             }
             else {
                 FinalVeredict.color = Color.red;
@@ -51,6 +59,29 @@ public class C_Vote : MonoBehaviour
     public void ResetColor()
     {
         FinalVeredict.color = Color.gray;
+    }
+
+    public void PointTypeManager(Tipos.alineacion alin)
+    {
+        Debug.Log("Reviewing type");
+        switch (alin)
+        {
+            case alineacion.Economico:
+                resourcesSlider.value += 1;
+                Debug.Log("Resources increased");
+                break;
+            case alineacion.Humanista:
+                //Elige alineacion ministro
+                canChooseMinisterType = true;
+                Debug.Log("Can choose minister type");
+                break;
+            case alineacion.Patriota:
+                victorySlider.value += 1;
+                Debug.Log("Victory Increased");
+                break;
+            default:
+                break;
+        }
     }
 
     void results(Tipos.alineacion alin) //cuenta de votos
