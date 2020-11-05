@@ -34,10 +34,12 @@ _My own little dictatorship_ es un juego de comedia y estrategia, donde se esper
 
 ### Efectos de proyecto
 
-  * **Patriota:** Al aprobar un proyecto patriota tienes la opción de adquirir un punto de victoria, o de consumir un punto de armamento para atacar al enemigo y disminuir en una unidad sus puntos de victoria.
+  * **Patriota:** Al aprobar un proyecto patriota tienes la opción de adquirir un punto de victoria, o atacar.
   * **Humanista:** Al aprobar un proyecto humanista adquieres por un turno la habilidad de escoger por qué tipo de ministro deseas cambiar en la fase 4.
   * **Económico:** Al aprobar este proyecto adquieres un punto de armamento.
+### Ataque
 
+Un ataque es una función que pueden realizar tanto el jugador como el enemigo. Consiste en consumir un punto de armamento para descontar un punto de victoria del contrincante. Esta acción se activa aprobando un proyecto patriota, y escogiendo la opción de atacar.
 
 ## Unidades
 ### Jugador
@@ -63,6 +65,13 @@ _My own little dictatorship_ es un juego de comedia y estrategia, donde se esper
 #### Métodos
 * **Votar `Vote`:** _void_ Ministro vota respecto a la propuesta de proyecto. Si el proyecto es del mismo alineamiento del ministro, éste se aprueba automáticamente. _A la fecha[\*](#9.1.-prototipo-1---Oct-w3)_, si el proyecto no es del mismo alineamiento el ministro voltea una moneda.
 
+### Enemigo
+#### Atributos
+
+* **Puntos de victoria:** _int_ Al igual que el jugador, el enemigo tiene puntos de victoria. Importante para determinar cuándo se pierde el juego. Los adquiere aleatoriamente al terminar la fase 4. 
+* **Puntos de armamento:** _int_ El enemigo también tiene puntos de armamento, que utiliza de la misma forma que el jugador. Los adquiere aleatoriamente al terminar la fase 4.
+*  **Probabilidad de aprobar proyectos:** _float_ Probabilidad que tiene un enemigo de aprobar un proyecto. Constante a **70%**. Si aprueba un proyecto puede, obtener un punto de victoria, obtener un punto de armamento, o atacar.
+
 ### Proyecto
 
 #### Atributos
@@ -78,7 +87,7 @@ _My own little dictatorship_ es un juego de comedia y estrategia, donde se esper
 # Propuesta Visual
 El juego tendrá un estilo _low-poly_
 # Bitácora de Iteraciones
-## 9.1. Prototipo 1 - Oct w3
+## Prototipo 1 - Oct w3
 El objetivo de este primer prototipo es descubrir y probar el _core loop_, implementando, completando, y desafiando las ideas propuestas en la fase inicial del proyecto. Se omiten algunas funciones planeadas en virtud del tiempo.
 
 El prototipo consta de una sola pantalla que tiene un rectángulo café emulando una mesa, con siete ministros alrededor representados por círculos. Sobre la mesa hay ocho botones que representan cada proyecto. Los puestos de los ministros están nominados según su posición relativa a la mesa; a las 12 está el puesto `A`, y luego siguen secuencialmente en la dirección de las manillas del reloj. Los ministros y los proyectos están etiquetados por color, de tal forma que su alineamiento sea inmediatamente distinguible. Al proponer un proyecto se registran los votos de cada uno de los ministros en una sección a la derecha de la mesa.
