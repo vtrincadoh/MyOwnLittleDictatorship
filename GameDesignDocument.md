@@ -34,7 +34,7 @@ _My own little dictatorship_ es un juego de comedia y estrategia, donde se esper
 
 ### Efectos de proyecto
 
-  * **Patriota:** Al aprobar un proyecto patriota tienes la opción de adquirir un punto de victoria, o de consumir un punto de armamento para atacar al enemigo y disminuir en una unidad sus puntos de victoria.
+  * **Patriota:** Al aprobar un proyecto patriota tienes la opción de adquirir un punto de victoria, o atacar.
   * **Humanista:** Al aprobar un proyecto humanista adquieres por un turno la habilidad de escoger por qué tipo de ministro deseas cambiar en la fase 4.
   * **Económico:** Al aprobar este proyecto adquieres un punto de armamento.
 ### Ataque
@@ -64,6 +64,13 @@ Un ataque es una función que pueden realizar tanto el jugador como el enemigo. 
 
 #### Métodos
 * **Votar `Vote`:** _void_ Ministro vota respecto a la propuesta de proyecto. Si el proyecto es del mismo alineamiento del ministro, éste se aprueba automáticamente. _A la fecha[\*](#9.1.-prototipo-1---Oct-w3)_, si el proyecto no es del mismo alineamiento el ministro voltea una moneda.
+
+### Enemigo
+#### Atributos
+
+* **Puntos de victoria:** _int_ Al igual que el jugador, el enemigo tiene puntos de victoria. Importante para determinar cuándo se pierde el juego. Los adquiere aleatoriamente al terminar la fase 4. 
+* **Puntos de armamento:** _int_ El enemigo también tiene puntos de armamento, que utiliza de la misma forma que el jugador. Los adquiere aleatoriamente al terminar la fase 4.
+*  **Probabilidad de aprobar proyectos:** _float_ Probabilidad que tiene un enemigo de aprobar un proyecto. Constante a **70%**. Si aprueba un proyecto puede, obtener un punto de victoria, obtener un punto de armamento, o atacar.
 
 ### Proyecto
 
