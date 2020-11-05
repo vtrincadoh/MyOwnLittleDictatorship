@@ -22,9 +22,17 @@ Eres un dictador que tiene como objetivo ser idolatrado por su gente, por lo que
 _My own little dictatorship_ es un juego de comedia y estrategia, donde se espera que el jugador adquiera la habilidad de modificar constantemente un gabinete de ministros con el propósito de mejorar sus posibilidades de aprobar un proyecto de gobierno. El *Core Loop* se divide principalmente en cuatro etapas:
 
 * **Etapa 1:** El jugador selecciona un proyecto para proponer a sus ministros.
+
 * **Etapa 2:** Los ministros votan por la aprobación de la propuesta.
+
 * **Etapa 3:** El jugador analiza los resultados de la votación y decide qué cambios debe hacer a su gabinete.
+
 * **Etapa 4:** El jugador cambia a sus ministros.
+
+### Meta
+
+El jugador gana la partida cuando obtiene al menos **6 puntos de victoria**, siempre y cuando éste tenga una **diferencia de al menos 2 PV** con el enemigo. La misma condición se da para perder el juego, pero al revés; es decir, cuando gana el enemigo. Esto sucede cuando el enemigo obtiene al menos 6 PV, con una diferencia de al menos 2 PV con el jugador.
+
 ## Mecánicas
 * **Proponer Proyecto:** El jugador puede escoger un proyecto de una lista para proponer a sus ministros. Solamente aquellos proyectos que no sean del alineamiento dominante del gabinete pueden ser propuestos.
 
@@ -69,7 +77,9 @@ Un ataque es una función que pueden realizar tanto el jugador como el enemigo. 
 #### Atributos
 
 * **Puntos de victoria:** _int_ Al igual que el jugador, el enemigo tiene puntos de victoria. Importante para determinar cuándo se pierde el juego. Los adquiere aleatoriamente al terminar la fase 4. 
+
 * **Puntos de armamento:** _int_ El enemigo también tiene puntos de armamento, que utiliza de la misma forma que el jugador. Los adquiere aleatoriamente al terminar la fase 4.
+
 *  **Probabilidad de aprobar proyectos:** _float_ Probabilidad que tiene un enemigo de aprobar un proyecto. Constante a **70%**. Si aprueba un proyecto puede, obtener un punto de victoria, obtener un punto de armamento, o atacar.
 
 ### Proyecto
