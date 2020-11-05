@@ -26,6 +26,10 @@ public class C_Phase : MonoBehaviour
 
     public Button attackButton;
 
+    int keyRecieved;
+
+    private GameObject auxButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -86,6 +90,9 @@ public class C_Phase : MonoBehaviour
             ChangeBool();
         }
         CheckSanity();
+        if (Input.GetKeyDown(KeyCode.A)) keyRecieved = 0;
+        else if (Input.GetKeyDown(KeyCode.B)) keyRecieved = 1;
+        else if (Input.GetKeyDown(KeyCode.C)) keyRecieved = 2;
     }
 
     public void phase1()
@@ -145,41 +152,22 @@ public class C_Phase : MonoBehaviour
         if(m.name == "Skip")
         {
             Debug.Log("Skipped vote");
+            DisableMinisterButtons();
+            Invoke("ChangeBool", 1f);
         }
         else if(m.name == "attack")
         {
             if (victoryPoints.value != 0) attackFuction();
             DisableMinisterButtons();
-            Invoke("ChangeBool", 2f);
+            Invoke("ChangeBool", 1f);
         }
         else
         {
             if (voting.canChooseMinisterType)
             {
                 //Player chooses type
-                Debug.Log("Choosing type");
-                
-                if (Input.GetKey("a")) {
-                    Debug.Log("Pressed a");
-                    m.GetComponent<C_Minister>().myAlineacion = alineacion.Economico;
-                    voting.canChooseMinisterType = false;
-                }
-                else if (Input.GetKey(KeyCode.B)) {
-                    Debug.Log("Pressed b");
-                    m.GetComponent<C_Minister>().myAlineacion = alineacion.Patriota;
-                    voting.canChooseMinisterType = false;
-                }
-                else if (Input.GetKey(KeyCode.C)){
-                    Debug.Log("Pressed c");
-                    m.GetComponent<C_Minister>().myAlineacion = alineacion.Humanista;
-                    voting.canChooseMinisterType = false;
-                }
-                if (!voting.canChooseMinisterType)
-                {
-                    Debug.Log("Final type is " + m.GetComponent<C_Minister>().myAlineacion);
-                    DisableMinisterButtons();
-                    Invoke("ChangeBool", 1f);
-                }
+                auxButton = m;
+                Invoke("ChangeAlineationByPlayer", 1f);
             }
             else
             {
@@ -189,6 +177,34 @@ public class C_Phase : MonoBehaviour
             }
         }
         if (victoryPoints.value == 10) winConditionMeet = true;
+    }
+
+    void ChangeAlineationByPlayer()
+    {
+        Debug.Log("Choosing type");
+        if (keyRecieved == 0)
+        {
+            Debug.Log("Pressed a");
+            auxButton.GetComponent<C_Minister>().myAlineacion = alineacion.Economico;
+            auxButton.GetComponent<Image>().color = Color.green;
+            voting.canChooseMinisterType = false;
+        }
+        if (keyRecieved == 1)
+        {
+            Debug.Log("Pressed b");
+            auxButton.GetComponent<C_Minister>().myAlineacion = alineacion.Patriota;
+            auxButton.GetComponent<Image>().color = Color.red;
+            voting.canChooseMinisterType = false;
+        }
+        if (keyRecieved == 2)
+        {
+            Debug.Log("Pressed c");
+            auxButton.GetComponent<C_Minister>().myAlineacion = alineacion.Humanista;
+            auxButton.GetComponent<Image>().color = Color.blue;
+            voting.canChooseMinisterType = false;
+        }
+        Invoke("DisableMinisterButtons", 0.5f);
+        Invoke("ChangeBool", 1f);
     }
 
     void attackFuction()
