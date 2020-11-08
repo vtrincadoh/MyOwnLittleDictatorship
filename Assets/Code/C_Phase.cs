@@ -145,6 +145,7 @@ public class C_Phase : MonoBehaviour
 
     public void phase4(GameObject m)
     {
+        Debug.Log(m.name + "pressed");
         //Change or Adoctrinate
         //Debug.Log("Changing");
         if(m.name == "Skip")
@@ -153,13 +154,15 @@ public class C_Phase : MonoBehaviour
             DisableMinisterButtons();
             Invoke("ChangeBool", 1f);
         }
-        else if(m.name == "attack" && victoryPointsVal != 0)
+        else if(m.name == "attack")
         {
-            if (victoryPoints.value != 0) attackFuction();
+            Debug.Log("Trying to attack");
+            if (victoryPoints.value != 0 && voting.canAttack) attackFuction();
+            voting.canAttack = false;
             DisableMinisterButtons();
             Invoke("ChangeBool", 1f);
         }
-        else
+        else if(m.tag == "Minister")
         {
             if (voting.canChooseMinisterType)
             {
