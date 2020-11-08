@@ -24,15 +24,16 @@ public class C_Phase : MonoBehaviour
     [Range(0.0f, 10.0f)] public int ResourcePointsVal;
     public Slider ResourcePoints;
 
-    public Button attackButton;
+    public Button attackButton; //Button For attack
 
-    int keyRecieved;
-
-    private GameObject auxButton;
+    public GameObject AlineationChart; //For changing ministers
+    private GameObject usingChart;
+    private bool notChanged;
 
     // Start is called before the first frame update
     void Start()
     {
+        notChanged = false;
         generator = gameObject.GetComponent<C_GenProject>();
         voting = gameObject.GetComponent<C_Vote>();
         minister = GameObject.FindGameObjectsWithTag("Minister");
@@ -89,10 +90,7 @@ public class C_Phase : MonoBehaviour
             phase1();
             ChangeBool();
         }
-        CheckSanity();
-        if (Input.GetKeyDown(KeyCode.A)) keyRecieved = 0;
-        else if (Input.GetKeyDown(KeyCode.B)) keyRecieved = 1;
-        else if (Input.GetKeyDown(KeyCode.C)) keyRecieved = 2;
+        //CheckSanity();
     }
 
     public void phase1()
@@ -141,7 +139,7 @@ public class C_Phase : MonoBehaviour
         //Review results
         Debug.Log("Reviewing");
         EnableMinisterButtons();
-        attackButton.interactable = true;
+        if(voting.canAttack) attackButton.interactable = true;
         //Get dominant type and compare with proyect type
     }
 
@@ -155,7 +153,7 @@ public class C_Phase : MonoBehaviour
             DisableMinisterButtons();
             Invoke("ChangeBool", 1f);
         }
-        else if(m.name == "attack")
+        else if(m.name == "attack" && victoryPointsVal != 0)
         {
             if (victoryPoints.value != 0) attackFuction();
             DisableMinisterButtons();
@@ -165,9 +163,19 @@ public class C_Phase : MonoBehaviour
         {
             if (voting.canChooseMinisterType)
             {
+                usingChart = Instantiate(AlineationChart, m.transform);
+                DisableMinisterButtons();
+                usingChart.GetComponent<C_AlineationChart>().Minister = m;
+                voting.canChooseMinisterType = false;
+                /*
+                if (chart.gameObject == null)
+                {
+                    Debug.Log("Is destroyed");
+                    voting.canChooseMinisterType = false;
+                    Invoke("ChangeBool", 1f);
+                } 
+                */
                 //Player chooses type
-                auxButton = m;
-                Invoke("ChangeAlineationByPlayer", 1f);
             }
             else
             {
@@ -176,46 +184,26 @@ public class C_Phase : MonoBehaviour
                 Invoke("ChangeBool", 1f);
             }
         }
-        if (victoryPoints.value == 10) winConditionMeet = true;
+        if (checkWinCondition()) winConditionMeet = true;
     }
 
-    void ChangeAlineationByPlayer()
+    bool checkWinCondition()
     {
-        Debug.Log("Choosing type");
-        if (keyRecieved == 0)
-        {
-            Debug.Log("Pressed a");
-            auxButton.GetComponent<C_Minister>().myAlineacion = alineacion.Economico;
-            auxButton.GetComponent<Image>().color = Color.green;
-            voting.canChooseMinisterType = false;
-        }
-        if (keyRecieved == 1)
-        {
-            Debug.Log("Pressed b");
-            auxButton.GetComponent<C_Minister>().myAlineacion = alineacion.Patriota;
-            auxButton.GetComponent<Image>().color = Color.red;
-            voting.canChooseMinisterType = false;
-        }
-        if (keyRecieved == 2)
-        {
-            Debug.Log("Pressed c");
-            auxButton.GetComponent<C_Minister>().myAlineacion = alineacion.Humanista;
-            auxButton.GetComponent<Image>().color = Color.blue;
-            voting.canChooseMinisterType = false;
-        }
-        Invoke("DisableMinisterButtons", 0.5f);
-        Invoke("ChangeBool", 1f);
+        //Check if win condition meet
+        bool flag = false;
+        return flag;
     }
 
     void attackFuction()
     {
         enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal--;
         Mathf.Clamp(enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal,0,10);
+        victoryPoints.value -= 1;
         ResourcePoints.value -= 1;
         Debug.Log("Attacking");
     }
 
-    void ChangeBool()
+    public void ChangeBool()
     {
         enemy.EnemyTurn();
         proyectsGenerated = !proyectsGenerated;

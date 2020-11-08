@@ -5,9 +5,15 @@ using UnityEngine.UI;
 
 public class C_EnemyBehavior : MonoBehaviour
 {
-    //public Slider enemyVictoryPoints,enemyResourcesPoints;
+    public Slider enemyVictoryPoints,enemyResourcesPoints;
     public int enemyVictoryPointsVal, enemyResourcesPointsVal;
     public int AproovedOrRejectedPointRange;
+
+    private void Update()
+    {
+        enemyResourcesPoints.value = enemyResourcesPointsVal;
+        enemyResourcesPoints.value = enemyResourcesPointsVal;
+    }
 
     public void EnemyTurn()
     {

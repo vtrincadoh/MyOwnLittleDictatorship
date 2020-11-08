@@ -13,7 +13,7 @@ public class C_Vote : MonoBehaviour
     public Slider victorySlider; //Slider for victory and resources points
     public Slider resourcesSlider;
 
-    public bool canChooseMinisterType;
+    public bool canChooseMinisterType,canAttack;
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +77,7 @@ public class C_Vote : MonoBehaviour
                 break;
             case alineacion.Patriota:
                 victorySlider.value += 1;
+                canAttack = true;
                 Debug.Log("Victory Increased");
                 break;
             default:
