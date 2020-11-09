@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Minister
   - Proyect
+  - Scene
+  - 3DMinister
+  - 3DProject
   layers:
   - Default
   - TransparentFX
