@@ -9,6 +9,8 @@ Paralelo 2 - Taller de creación de videojuegos
 Vicente Trincado
 Sebastián Meneses
 
+Actualización: Noviembre 09, 2020
+
 
 # Tabla de contenidos
 [TOC]
@@ -87,7 +89,7 @@ Un ataque es una función que pueden realizar tanto el jugador como el enemigo. 
 #### Atributos
 
 * **Nombre `name`:** _string_ Nombre del proyecto. _A la fecha[\*](#9.1.-prototipo-1---Oct-w3)_, se genera automáticamente. Propósito estético. A futuro estará asociado al alineamiento del proyecto. Ej: "Plaza de la nación", "Estadio del líder supremo", etc.
-* **Nivel `level`:** No implementado aún. Ver [Prorgesión](#6. niveles-y-progresión). <!--Mentira, eso no existe todavía-->
+* **Nivel `level`:** No implementado aún.
 * **Alineamiento `alignment`: **_enum_ Tipo de proyecto. Asociado a las preferencias de los ministros. Para más información ver <!--¿Ver qué?-->.
 
 # <!--Historia y Narrativa-->
@@ -122,6 +124,8 @@ El jugador gana cuando logra hacer **dos proyectos de cada tipo**, _i.e._ dos pr
 
 * **Etapa 4:**  
   El jugador cambia a solo uno de los ministros si así lo desea. Al cambiar un ministro se hace un _reroll_ y se decide aleatoriamente el nuevo alineamiento.
+  
+## Alpha - Nov w3
 
 # Extras
 # Referencias
