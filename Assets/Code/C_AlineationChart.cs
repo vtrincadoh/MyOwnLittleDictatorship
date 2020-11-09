@@ -7,22 +7,20 @@ using Tipos;
 public class C_AlineationChart : MonoBehaviour
 {
     public GameObject Minister;
-    public GameObject ministerGameObject;
+    public GameObject typePlacement;
     private GameObject self;
     public GameObject self3d;
     public C_Phase phase;
 
     private void Start()
     {
+        typePlacement = GameObject.Find("Type");
         phase = GameObject.FindGameObjectWithTag("Player").GetComponent<C_Phase>();
+        self3d.transform.SetParent(null);
         self = this.gameObject;
+        self3d.transform.position = typePlacement.transform.position;
+        self3d.transform.rotation = Quaternion.Euler(new Vector3(25, 0, 0));
         Debug.Log("Self is " + self.name);
-    }
-
-    private void Update()
-    {
-        self3d.transform.position = ministerGameObject.transform.position + Vector3.up * 1.5f;
-        self3d.transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform);
     }
 
     public void Change(Button type)
@@ -30,28 +28,36 @@ public class C_AlineationChart : MonoBehaviour
         switch (type.name)
         {
             case "BPatriota":
+                self3d.transform.SetParent(this.gameObject.transform);
                 Minister.GetComponent<C_Minister>().myAlineacion = alineacion.Patriota;
                 Minister.GetComponent<Image>().color = Color.red;
                 Debug.Log("Cambiado a Patriora");
-                phase.ChangeBool();
-                Destroy(self);
+                //phase.ChangeBool();
+                Destroy(self,1f);
                 break;
             case "BHumanista":
+                self3d.transform.SetParent(this.gameObject.transform);
                 Minister.GetComponent<C_Minister>().myAlineacion = alineacion.Humanista;
                 Minister.GetComponent<Image>().color = Color.blue;
                 Debug.Log("Cambiado a Humanista");
-                phase.ChangeBool();
-                Destroy(self);
+                //phase.ChangeBool();
+                Destroy(self,1f);
                 break;
             case "BEconomico":
+                self3d.transform.SetParent(this.gameObject.transform);
                 Minister.GetComponent<C_Minister>().myAlineacion = alineacion.Economico;
                 Minister.GetComponent<Image>().color = Color.green;
                 Debug.Log("Cambiado a Economico");
-                phase.ChangeBool();
-                Destroy(self);
+                //phase.ChangeBool();
+                Destroy(self,1f);
                 break;
             default:
                 break;
         }
+    }
+
+    private void OnDestroy()
+    {
+        phase.ChangeBool();
     }
 }

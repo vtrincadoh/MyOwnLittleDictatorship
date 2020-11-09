@@ -174,7 +174,7 @@ public class C_Phase : MonoBehaviour
                 usingChart = Instantiate(AlineationChart, m.GetComponent<C_Minister>().transform);
                 DisableMinisterButtons();
                 usingChart.GetComponent<C_AlineationChart>().Minister = m;
-                usingChart.GetComponent<C_AlineationChart>().ministerGameObject = m.GetComponent<C_Minister>().minister3dGameObject;
+                //usingChart.GetComponent<C_AlineationChart>().ministerGameObject = m.GetComponent<C_Minister>().minister3dGameObject;
                 voting.canChooseMinisterType = false;
                 /*
                 if (chart.gameObject == null)
@@ -206,7 +206,7 @@ public class C_Phase : MonoBehaviour
     bool checkLostCondition()
     {
         bool flag = false;
-        if (enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal < 10 && victoryPointsVal + 2 <= enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal) flag = true;
+        if (enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal >= 10 && victoryPointsVal + 2 <= enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal) flag = true;
         return flag;
     }
 

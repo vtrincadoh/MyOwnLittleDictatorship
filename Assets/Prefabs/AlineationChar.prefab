@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Minister: {fileID: 0}
-  ministerGameObject: {fileID: 0}
+  typePlacement: {fileID: 0}
   self3d: {fileID: 6007983550936543414}
   phase: {fileID: 0}
 --- !u!1 &31286862307591725
@@ -1009,7 +1009,7 @@ RectTransform:
   m_GameObject: {fileID: 6007983550936543414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.912534, y: 13.448135, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 7861695616775009217}
   - {fileID: 8333802721628440808}

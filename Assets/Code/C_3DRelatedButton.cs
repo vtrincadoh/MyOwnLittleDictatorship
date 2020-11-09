@@ -12,6 +12,11 @@ public class C_3DRelatedButton : MonoBehaviour
     {
         canBeInteracted = thisButton.GetComponent<Button>().interactable;
         if (thisButton.GetComponent<Image>() != null) gameObject.GetComponent<MeshRenderer>().material.color = thisButton.GetComponent<Image>().color; //Could glow
+        if(thisButton.tag != "Minister")
+        {
+            if(thisButton.interactable || thisButton.GetComponent<Image>().color != Color.black) this.gameObject.GetComponent<MeshRenderer>().enabled = true;
+            else this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        }
     }
 
     public void Selected()
