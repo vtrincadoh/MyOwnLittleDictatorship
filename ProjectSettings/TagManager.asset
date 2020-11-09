@@ -9,6 +9,7 @@ TagManager:
   - Scene
   - 3DMinister
   - 3DProject
+  - Utilities
   layers:
   - Default
   - TransparentFX

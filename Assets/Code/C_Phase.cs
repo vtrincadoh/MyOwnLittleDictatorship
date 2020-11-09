@@ -40,16 +40,6 @@ public class C_Phase : MonoBehaviour
         doneEconomic = doneHumanista = donePatriotic = 0;
     }
 
-    private void CheckSanity() //Check if everybody is insane or theres still insanity in ministers
-    {
-        bool everyBodyInsane = false;
-        foreach (GameObject m in minister)
-        {
-            if (m.GetComponent<C_Minister>().sanity < 100f) everyBodyInsane = true;
-        }
-        if (!everyBodyInsane) lostConditionMeet = true;
-    }
-
     private void EnableMinisterButtons()
     {
         foreach(GameObject x in minister)
@@ -65,6 +55,17 @@ public class C_Phase : MonoBehaviour
             x.GetComponent<Button>().interactable = false;
         }
     }
+
+    private void EnableUtilities()
+    {
+        foreach (GameObject x in GameObject.FindGameObjectsWithTag("Utilities")) x.GetComponent<Button>().interactable = true;
+    }
+
+    private void DisableUtilities()
+    {
+        foreach (GameObject x in GameObject.FindGameObjectsWithTag("Utilities")) x.GetComponent<Button>().interactable = false;
+    }
+
 
     private void EndGame(string Condition) //Manages the game end
     {
@@ -102,6 +103,7 @@ public class C_Phase : MonoBehaviour
         Debug.Log("Generating");
         generator.EnableButtons();
         generator.GenerateProject();
+        DisableUtilities();
     }
 
     public void phase2(GameObject button)
@@ -138,8 +140,10 @@ public class C_Phase : MonoBehaviour
     {
         //Review results
         Debug.Log("Reviewing");
+        EnableUtilities();
         EnableMinisterButtons();
         if(voting.canAttack) attackButton.interactable = true;
+        else attackButton.interactable = false;
         //Get dominant type and compare with proyect type
     }
 
