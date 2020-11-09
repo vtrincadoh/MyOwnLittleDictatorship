@@ -14,8 +14,8 @@ public class C_EnemyBehavior : MonoBehaviour
     private void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        enemyResourcesPoints.value = enemyResourcesPointsVal;
-        enemyResourcesPoints.value = enemyResourcesPointsVal;
+        enemyResourcesPoints.value = enemyResourcesPointsVal = 0;
+        enemyResourcesPoints.value = enemyResourcesPointsVal = 0;
     }
 
     public void EnemyTurn()

@@ -7,7 +7,9 @@ using Tipos;
 public class C_AlineationChart : MonoBehaviour
 {
     public GameObject Minister;
+    public GameObject ministerGameObject;
     private GameObject self;
+    public GameObject self3d;
     public C_Phase phase;
 
     private void Start()
@@ -15,6 +17,12 @@ public class C_AlineationChart : MonoBehaviour
         phase = GameObject.FindGameObjectWithTag("Player").GetComponent<C_Phase>();
         self = this.gameObject;
         Debug.Log("Self is " + self.name);
+    }
+
+    private void Update()
+    {
+        self3d.transform.position = ministerGameObject.transform.position + Vector3.up * 1.5f;
+        self3d.transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform);
     }
 
     public void Change(Button type)

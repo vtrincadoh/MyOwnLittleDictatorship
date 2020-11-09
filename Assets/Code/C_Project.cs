@@ -7,6 +7,7 @@ using Tipos;
 public class C_Project : MonoBehaviour
 {
     public Text namePlace;
+    public GameObject objectSame;
 
     private void Update()
     {

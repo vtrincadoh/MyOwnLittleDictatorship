@@ -29,6 +29,7 @@ public class C_Phase : MonoBehaviour
     public GameObject AlineationChart; //For changing ministers
     private GameObject usingChart;
     private bool notChanged;
+    public Canvas OverlayCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -170,9 +171,10 @@ public class C_Phase : MonoBehaviour
         {
             if (voting.canChooseMinisterType)
             {
-                usingChart = Instantiate(AlineationChart, m.transform);
+                usingChart = Instantiate(AlineationChart, m.GetComponent<C_Minister>().transform);
                 DisableMinisterButtons();
                 usingChart.GetComponent<C_AlineationChart>().Minister = m;
+                usingChart.GetComponent<C_AlineationChart>().ministerGameObject = m.GetComponent<C_Minister>().minister3dGameObject;
                 voting.canChooseMinisterType = false;
                 /*
                 if (chart.gameObject == null)

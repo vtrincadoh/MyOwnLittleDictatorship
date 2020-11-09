@@ -16,6 +16,7 @@ public class C_Minister : MonoBehaviour
     public Text posName;
     public Slider sanitySlider;
     public Image myVote;
+    public GameObject minister3dGameObject;
 
     private void Start()
     {
