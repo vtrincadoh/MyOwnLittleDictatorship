@@ -11,8 +11,8 @@ public class C_Phase : MonoBehaviour
     public C_EnemyBehavior enemy; //Script from enemy
     public GameObject endScreen; //Shows when you win/lost
     private bool proyectsGenerated = false; //Started new generated proyects
-    private bool winConditionMeet = false; //Meet the win condition
-    private bool lostConditionMeet = false; //Meet the loss condition
+    //private bool winConditionMeet = false; //Meet the win condition
+    //private bool lostConditionMeet = false; //Meet the loss condition
     public GameObject[] minister; //Group of ministers in game
     private int donePatriotic, doneHumanista, doneEconomic; //Contador proyectos aprobados
     public Text aPatriotic, aHumanist, aEconomic; //Contador visual para los proyectos
@@ -76,12 +76,12 @@ public class C_Phase : MonoBehaviour
     private void Update()
     {
         victoryPoints.value += victoryPointsVal;
-        if (winConditionMeet)
+        if (checkWinCondition())
         {
             Debug.Log("You win");
             EndGame("You win");
         }
-        else if (lostConditionMeet)
+        else if (checkLostCondition())
         {
             Debug.Log("You lost");
             EndGame("You lost");
@@ -191,13 +191,20 @@ public class C_Phase : MonoBehaviour
                 Invoke("ChangeBool", 1f);
             }
         }
-        if (checkWinCondition()) winConditionMeet = true;
     }
 
     bool checkWinCondition()
     {
         //Check if win condition meet
         bool flag = false;
+        if (victoryPointsVal == 10 && victoryPointsVal >= enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal + 2) flag = true;
+        return flag;
+    }
+
+    bool checkLostCondition()
+    {
+        bool flag = false;
+        if (enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal < 10 && victoryPointsVal + 2 <= enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal) flag = true;
         return flag;
     }
 
