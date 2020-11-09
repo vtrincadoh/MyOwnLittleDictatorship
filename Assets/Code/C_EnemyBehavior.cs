@@ -9,11 +9,8 @@ public class C_EnemyBehavior : MonoBehaviour
     public int enemyVictoryPointsVal, enemyResourcesPointsVal;
     public int AproovedOrRejectedPointRange;
 
-    public GameObject player;
-
     private void Update()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         enemyResourcesPoints.value = enemyResourcesPointsVal;
         enemyResourcesPoints.value = enemyResourcesPointsVal;
     }
@@ -35,9 +32,9 @@ public class C_EnemyBehavior : MonoBehaviour
                     enemyResourcesPointsVal++;
                     break;
                 case 2: //Enemy attack player
-                    if(enemyVictoryPointsVal != 0 && enemyResourcesPointsVal != 0)
+                    if(enemyVictoryPointsVal > 0)
                     {
-                        player.GetComponent<C_Phase>().victoryPointsVal--;
+                        //attack
                     }
                     else
                     {
