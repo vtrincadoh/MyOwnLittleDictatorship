@@ -33,20 +33,18 @@ _My own little dictatorship_ es un juego de comedia y estrategia, donde se esper
 
 ### Meta
 
-El jugador gana la partida cuando obtiene al menos **6 puntos de victoria**, siempre y cuando éste tenga una **diferencia de al menos 2 PV** con el enemigo. La misma condición se da para perder el juego, pero al revés; es decir, cuando gana el enemigo. Esto sucede cuando el enemigo obtiene al menos 6 PV, con una diferencia de al menos 2 PV con el jugador.
+El jugador gana la partida cuando obtiene al menos **6 puntos de victoria**, siempre y cuando éste tenga una **diferencia de al menos 2 PV** con el [enemigo](#enemigo). La misma condición se da para perder el juego, pero al revés; es decir, cuando gana el enemigo. Esto sucede cuando el enemigo obtiene al menos 6 PV, con una diferencia de al menos 2 PV con el jugador.
 
 ## Mecánicas
 * **Proponer Proyecto:** El jugador puede escoger un proyecto de una lista para proponer a sus ministros. Solamente aquellos proyectos que no sean del alineamiento dominante del gabinete pueden ser propuestos.
-
-<!--* **Reformar `reform`:** _a.k.a. Adoctrinar_. Modifica a un ministro sin cambiarlo por otro [WIP].-->
 
 * **Cambiar:** Elimina a uno de los ministros de un puesto, y lo cambia por otro con un alineamiento distinto.
 
 ### Efectos de proyecto
 
-  * **Patriota:** Al aprobar un proyecto patriota tienes la opción de adquirir un punto de victoria, o atacar.
-  * **Humanista:** Al aprobar un proyecto humanista adquieres por un turno la habilidad de escoger por qué tipo de ministro deseas cambiar en la fase 4.
-  * **Económico:** Al aprobar este proyecto adquieres un punto de armamento.
+  * **Patriota `patriotic`:** Al aprobar un proyecto patriota tienes la opción de adquirir un punto de victoria, o atacar.
+  * **Humanista `humanistic`:** Al aprobar un proyecto humanista adquieres por un turno la habilidad de escoger por qué tipo de ministro deseas cambiar en la fase 4.
+  * **Económico `economic`:** Al aprobar este proyecto adquieres un punto de armamento.
 ### Ataque
 
 Un ataque es una función que pueden realizar tanto el jugador como el enemigo. Consiste en consumir un punto de armamento para descontar un punto de victoria del contrincante. Esta acción se activa aprobando un proyecto patriota, y escogiendo la opción de atacar.
@@ -66,14 +64,14 @@ Un ataque es una función que pueden realizar tanto el jugador como el enemigo. 
 
 * **Nombre `name`:** _string_ Nombre y apellido del ministro. Generados aleatoriamente junto con el ministro. Su propósito es únicamente estético, no afecta la funcionalidad. Ej: "Roberto Pérez".
 
-* **Puesto `seat`:** _enum_ Posición del ministro relativo a la mesa. Los enumeradores son letras mayúsculas que siguen la secuencia `A, B, C, ...`. A las 12 está el puesto `A`, y luego siguen secuencialmente en la dirección de las manillas del reloj. _A la fecha[\*](#9.1.-prototipo-1---Oct-w3)_, su propósito es de organización interna.
+* **Puesto `seat`:** _enum_ Posición del ministro relativo a la mesa. Los enumeradores son letras mayúsculas que siguen la secuencia `A, B, C, ...`. A las 12 está el puesto `A`, y luego siguen secuencialmente en la dirección de las manillas del reloj. Su propósito es de organización interna.
 
-* **[Obsoleto] Cordura `sanity`:** _float_ Porcentaje que determina qué tan cuerdo es el ministro. El jugador pierde cuando todos [WIP] los ministros alcanzan el máximo de su cordura, por lo que el jugador siempre querrá mantener sus ministros lo menos cuerdos posible. Al generar un ministro, este inicia con un valor de cordura aleatorio entre 35-55%.
+* **<span style="color:red">[Obsoleto]</span>. Cordura `sanity`:** _float_ Porcentaje que determina qué tan cuerdo es el ministro. El jugador pierde cuando todos [WIP] los ministros alcanzan el máximo de su cordura, por lo que el jugador siempre querrá mantener sus ministros lo menos cuerdos posible. Al generar un ministro, este inicia con un valor de cordura aleatorio entre 35-55%.
 
 * **Alineamiento `alignment`:** _enum_ Preferencia de votación del ministro. Para más información ver <!--¿Ver qué?-->.
 
 #### Métodos
-* **Votar `Vote`:** _void_ Ministro vota respecto a la propuesta de proyecto. Si el proyecto es del mismo alineamiento del ministro, éste se aprueba automáticamente. _A la fecha[\*](#9.1.-prototipo-1---Oct-w3)_, si el proyecto no es del mismo alineamiento el ministro voltea una moneda.
+* **Votar `Vote`:** _void_ Ministro vota respecto a la propuesta de proyecto. Si el proyecto es del mismo alineamiento del ministro, éste lo aprueba automáticamente. Si el proyecto no es del mismo alineamiento, el ministro vota al azar (50/50).
 
 ### Enemigo
 #### Atributos
@@ -82,22 +80,25 @@ Un ataque es una función que pueden realizar tanto el jugador como el enemigo. 
 
 * **Puntos de armamento:** _int_ El enemigo también tiene puntos de armamento, que utiliza de la misma forma que el jugador. Los adquiere aleatoriamente al terminar la fase 4.
 
-*  **Probabilidad de aprobar proyectos:** _float_ Probabilidad que tiene un enemigo de aprobar un proyecto. Constante a **70%**. Si aprueba un proyecto puede, obtener un punto de victoria, obtener un punto de armamento, o atacar.
+*  **Probabilidad de aprobar proyectos:** _float_ Probabilidad que tiene un enemigo de aprobar un proyecto. Constante a **70%**. Si aprueba un proyecto puede obtener un punto de victoria, u obtener un punto de armamento, o atacar.
 
 ### Proyecto
 
 #### Atributos
 
-* **Nombre `name`:** _string_ Nombre del proyecto. _A la fecha[\*](#9.1.-prototipo-1---Oct-w3)_, se genera automáticamente. Propósito estético. A futuro estará asociado al alineamiento del proyecto. Ej: "Plaza de la nación", "Estadio del líder supremo", etc.
+* **Nombre `name`:** _string_ Nombre del proyecto. Se genera automáticamente. Propósito estético. A futuro estará asociado al alineamiento del proyecto. Ej: "Plaza de la nación", "Estadio del líder supremo", etc.
 * **Nivel `level`:** No implementado aún.
 * **Alineamiento `alignment`: **_enum_ Tipo de proyecto. Asociado a las preferencias de los ministros. Para más información ver <!--¿Ver qué?-->.
 
-# <!--Historia y Narrativa-->
+# Historia y Narrativa
+
+
+
 # <!--Niveles y progresión-->
 # <!--Interfaces-->
 # <!--Propuesta de audio-->
 # Propuesta Visual
-El juego tendrá un estilo _low-poly_
+El juego estará hecho en 3D, y tendrá un estilo _low-poly_. Ambientación que recuerda a la propaganda de Corea del Norte. Uso extenso del color rojo en menús, y de tipo _Konstruktor_.
 # Bitácora de Iteraciones
 ## Prototipo 1 - Oct w3
 El objetivo de este primer prototipo es descubrir y probar el _core loop_, implementando, completando, y desafiando las ideas propuestas en la fase inicial del proyecto. Se omiten algunas funciones planeadas en virtud del tiempo.
@@ -126,6 +127,21 @@ El jugador gana cuando logra hacer **dos proyectos de cada tipo**, _i.e._ dos pr
   El jugador cambia a solo uno de los ministros si así lo desea. Al cambiar un ministro se hace un _reroll_ y se decide aleatoriamente el nuevo alineamiento.
   
 ## Alpha - Nov w3
+
+El prototipo anterior fue presentado a un grupo acotado de jugadores en una instancia de reunión de _USM Games_. Los cambios efectuados en este _Alpha_ son reflejo de su retroalimentación, por la cual les agradecemos enormemente. 
+
+En esta iteración se reformularon los objetivos del juego, se agregó un enemigo, y se cambió el enfoque del juego de una propuesta cómica a una estratégica. Además, se inicia la transición hacia un entorno 3D.
+### Meta
+Como se puede ver en [_Core Gameplay_](#meta), ahora la meta del juego está íntimamente asociada a la adición de una nueva entidad, el [enemigo](#enemigo), que cambia la dinámica del juego hacia la estrategia. Éste es un reflejo incompleto del jugador, pues al igual que él puede atacar, obtener puntos, y aprobar proyectos. Sin embargo, no tiene ministros.
+El objetivo es adquirir más puntos de victoria que el contrincante, con una determinada diferencia. Si así lo logra, el jugador gana la partida. Caso contrario, en que el enemigo cumple los requisitos, el jugador pierde.
+
+### Avances en el entorno 3D
+
+![Progreso de transición 3D](MiscArt\AlphaProgress1.png)
+_Progreso de transición a entorno 3D (Funcional)_
+
+![MockUp del entorno 3D](MiscArt\MockUpScene.png)
+_Mockup del entorno 3D (No funcional)_
 
 # Extras
 # Referencias
