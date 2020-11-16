@@ -7,6 +7,12 @@ using UnityEngine.SceneManagement;
 public class C_PauseMenuManager : MonoBehaviour
 {
     public Text finalText;
+    private Scene sc;
+
+    private void Start()
+    {
+        sc = SceneManager.GetActiveScene();
+    }
 
     private void PauseGame() //Pause Game
     {
@@ -15,7 +21,7 @@ public class C_PauseMenuManager : MonoBehaviour
 
     public void Reload() //Restard game
     {
-        SceneManager.LoadScene(1);
+        Application.LoadLevel(sc.name);
     }
 
     public void Return() // Return to main screen
