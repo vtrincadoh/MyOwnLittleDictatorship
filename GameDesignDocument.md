@@ -152,7 +152,7 @@ _Mockup del entorno 3D (No funcional)_
 [Lowpoly Modern City Buildings Set](https://assetstore.unity.com/packages/3d/environments/urban/lowpoly-modern-city-buildings-set-64427)  
 [Low Poly Storage Pack](https://assetstore.unity.com/packages/3d/environments/urban/low-poly-storage-pack-101732)  
 [Low Poly Road Pack](https://assetstore.unity.com/packages/3d/environments/roadways/low-poly-road-pack-67288)  
-## Audio
+## SFX
 [Falling, Comedic, A.wav](https://freesound.org/people/InspectorJ/sounds/360662/)  
 [Mouse click sounds](https://freesound.org/people/Masgame/sounds/347544/)  
 [dot matrix printer.MP3](https://freesound.org/people/DisasterServices/sounds/320008/)  
@@ -163,3 +163,12 @@ _Mockup del entorno 3D (No funcional)_
 [Indoor adult murmur, small group.wav](https://freesound.org/people/SpliceSound/sounds/260121/)  
 [Murmur 1.wav](https://freesound.org/people/jayfrosting/sounds/333395/)  
 [missile_launch_2](https://freesound.org/people/smcameron/sounds/51468/)  
+[Ricochet](https://www.storyblocks.com/audio/stock/ricochet-sg8xkhahidhk0wxxqdu.html)
+## Música
+[National Spirit](https://www.storyblocks.com/audio/stock/national-spirit-semlm40nupbk0wy2qy0.html)  
+[When Johnny Comes Marching](https://www.storyblocks.com/audio/stock/when-johnny-comes-marching-hxhg6er2ivhk0wy1lho.html)  
+[Off Balance](https://www.storyblocks.com/audio/stock/off-balance-bgdvcp62udhk0wy0iir.html)  
+_Trincado's favourite_[Spaghetti Gangster](https://www.storyblocks.com/audio/stock/spaghetti-gangster-bl1zkfu-oask4bq6h3c.html)  
+[Pleasant and bouncy strings for light comedies, animation and children's content
+Gerardo Garcia Jr.
+](https://www.storyblocks.com/audio/stock/pleasant-and-bouncy-strings-for-light-comedies-animation-and-childrens-content-hhciaudzwkdz2ckld.html)  
