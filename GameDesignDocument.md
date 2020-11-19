@@ -9,7 +9,7 @@ Paralelo 2 - Taller de creación de videojuegos
 Vicente Trincado
 Sebastián Meneses
 
-Actualización: Noviembre 09, 2020
+Actualización: Noviembre 16, 2020
 
 
 # Tabla de contenidos
@@ -21,12 +21,10 @@ Eres un dictador que tiene como objetivo ser idolatrado por su gente, por lo que
 # Jugabilidad y Mecánicas
 ## _Core Gameplay_
 
-_My own little dictatorship_ es un juego de comedia y estrategia, donde se espera que el jugador adquiera la habilidad de modificar constantemente un gabinete de ministros con el propósito de mejorar sus posibilidades de aprobar un proyecto de gobierno. El *Core Loop* se divide principalmente en cuatro etapas:
+_My own little dictatorship_ es un juego de estrategia, donde se espera que el jugador adquiera la habilidad de modificar constantemente un gabinete de ministros con el propósito de mejorar sus posibilidades de aprobar un proyecto de gobierno. El *Core Loop* se divide principalmente en cuatro etapas:
 
 * **Etapa 1:** El jugador selecciona un proyecto para proponer a sus ministros.
-
 * **Etapa 2:** Los ministros votan por la aprobación de la propuesta.
-
 * **Etapa 3:** El jugador analiza los resultados de la votación y decide qué cambios debe hacer a su gabinete.
 
 * **Etapa 4:** El jugador cambia a sus ministros.
@@ -37,18 +35,14 @@ El jugador gana la partida cuando obtiene al menos **6 puntos de victoria**, sie
 
 ## Mecánicas
 * **Proponer Proyecto:** El jugador puede escoger un proyecto de una lista para proponer a sus ministros. Solamente aquellos proyectos que no sean del alineamiento dominante del gabinete pueden ser propuestos.
-
-* **Cambiar:** Elimina a uno de los ministros de un puesto, y lo cambia por otro con un alineamiento distinto.
+* **Cambiar:** Elimina a uno de los ministros de un puesto, y lo cambia por otro con un nuevo alineamiento aleatoriamente definido.
+* **Atacar `attack`:** Un ataque es una función que pueden realizar tanto el jugador como el enemigo. Consiste en consumir un punto de armamento para descontar un punto de victoria del contrincante. Esta acción se activa aprobando un proyecto patriota, y escogiendo la opción de atacar.
 
 ### Efectos de proyecto
 
   * **Patriota `patriotic`:** Al aprobar un proyecto patriota tienes la opción de adquirir un punto de victoria, o atacar.
   * **Humanista `humanistic`:** Al aprobar un proyecto humanista adquieres por un turno la habilidad de escoger por qué tipo de ministro deseas cambiar en la fase 4.
   * **Económico `economic`:** Al aprobar este proyecto adquieres un punto de armamento.
-### Ataque
-
-Un ataque es una función que pueden realizar tanto el jugador como el enemigo. Consiste en consumir un punto de armamento para descontar un punto de victoria del contrincante. Esta acción se activa aprobando un proyecto patriota, y escogiendo la opción de atacar.
-
 ## Unidades
 ### Jugador
 
@@ -76,9 +70,9 @@ Un ataque es una función que pueden realizar tanto el jugador como el enemigo. 
 ### Enemigo
 #### Atributos
 
-* **Puntos de victoria:** _int_ Al igual que el jugador, el enemigo tiene puntos de victoria. Importante para determinar cuándo se pierde el juego. Los adquiere aleatoriamente al terminar la fase 4. 
+* **Puntos de victoria `victory points`:** _int_ Al igual que el jugador, el enemigo tiene puntos de victoria. Importante para determinar cuándo se pierde el juego. Los adquiere aleatoriamente al terminar la fase 4. 
 
-* **Puntos de armamento:** _int_ El enemigo también tiene puntos de armamento, que utiliza de la misma forma que el jugador. Los adquiere aleatoriamente al terminar la fase 4.
+* **Puntos de armamento `resource points`:** _int_ El enemigo también tiene puntos de armamento, que utiliza de la misma forma que el jugador. Los adquiere aleatoriamente al terminar la fase 4.
 
 *  **Probabilidad de aprobar proyectos:** _float_ Probabilidad que tiene un enemigo de aprobar un proyecto. Constante a **70%**. Si aprueba un proyecto puede obtener un punto de victoria, u obtener un punto de armamento, o atacar.
 
@@ -90,7 +84,7 @@ Un ataque es una función que pueden realizar tanto el jugador como el enemigo. 
 * **Nivel `level`:** No implementado aún.
 * **Alineamiento `alignment`: **_enum_ Tipo de proyecto. Asociado a las preferencias de los ministros. Para más información ver <!--¿Ver qué?-->.
 
-# Historia y Narrativa
+# <!--Historia y Narrativa-->
 
 
 
@@ -131,11 +125,11 @@ El jugador gana cuando logra hacer **dos proyectos de cada tipo**, _i.e._ dos pr
 El prototipo anterior fue presentado a un grupo acotado de jugadores en una instancia de reunión de _USM Games_. Los cambios efectuados en este _Alpha_ son reflejo de su retroalimentación, por la cual les agradecemos enormemente. 
 
 En esta iteración se reformularon los objetivos del juego, se agregó un enemigo, y se cambió el enfoque del juego de una propuesta cómica a una estratégica. Además, se inicia la transición hacia un entorno 3D.
-### Meta
+#### Meta
 Como se puede ver en [_Core Gameplay_](#meta), ahora la meta del juego está íntimamente asociada a la adición de una nueva entidad, el [enemigo](#enemigo), que cambia la dinámica del juego hacia la estrategia. Éste es un reflejo incompleto del jugador, pues al igual que él puede atacar, obtener puntos, y aprobar proyectos. Sin embargo, no tiene ministros.
 El objetivo es adquirir más puntos de victoria que el contrincante, con una determinada diferencia. Si así lo logra, el jugador gana la partida. Caso contrario, en que el enemigo cumple los requisitos, el jugador pierde.
 
-### Avances en el entorno 3D
+#### Avances en el entorno 3D
 
 ![Progreso de transición 3D](MiscArt\AlphaProgress1.png)
 _Progreso de transición a entorno 3D (Funcional)_
@@ -146,6 +140,8 @@ _Mockup del entorno 3D (No funcional)_
 # Extras
 # Referencias
 # _Assets_ externos
+
+## Unity Asset store
 [JSON .NET For Unity](https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-11347)  
 [Full Menu System](https://assetstore.unity.com/packages/tools/gui/full-menu-system-free-158919)  
 [Voxel Wooden Funiture](https://assetstore.unity.com/packages/3d/props/furniture/voxel-wooden-funiture-67811)  
@@ -156,4 +152,14 @@ _Mockup del entorno 3D (No funcional)_
 [Lowpoly Modern City Buildings Set](https://assetstore.unity.com/packages/3d/environments/urban/lowpoly-modern-city-buildings-set-64427)  
 [Low Poly Storage Pack](https://assetstore.unity.com/packages/3d/environments/urban/low-poly-storage-pack-101732)  
 [Low Poly Road Pack](https://assetstore.unity.com/packages/3d/environments/roadways/low-poly-road-pack-67288)  
-
+## Audio
+[Falling, Comedic, A.wav](https://freesound.org/people/InspectorJ/sounds/360662/)  
+[Mouse click sounds](https://freesound.org/people/Masgame/sounds/347544/)  
+[dot matrix printer.MP3](https://freesound.org/people/DisasterServices/sounds/320008/)  
+[computer loading part 2](https://freesound.org/people/Fishh.com/sounds/531722/)
+[TV Static.wav](https://freesound.org/people/Dean-Raul_DiArchangeli/sounds/116395/)  
+[Grunts.wav](https://freesound.org/people/bennychico11/sounds/80438/)  
+[Office Ambience](https://freesound.org/people/qubodup/sounds/199896/)  
+[Indoor adult murmur, small group.wav](https://freesound.org/people/SpliceSound/sounds/260121/)  
+[Murmur 1.wav](https://freesound.org/people/jayfrosting/sounds/333395/)  
+[missile_launch_2](https://freesound.org/people/smcameron/sounds/51468/)  
