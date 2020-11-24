@@ -62,7 +62,7 @@ El jugador gana la partida cuando obtiene al menos **6 puntos de victoria**, sie
 
 * **<span style="color:red">[Obsoleto]</span>. Cordura `sanity`:** _float_ Porcentaje que determina qué tan cuerdo es el ministro. El jugador pierde cuando todos [WIP] los ministros alcanzan el máximo de su cordura, por lo que el jugador siempre querrá mantener sus ministros lo menos cuerdos posible. Al generar un ministro, este inicia con un valor de cordura aleatorio entre 35-55%.
 
-* **Alineamiento `alignment`:** _enum_ Preferencia de votación del ministro. Para más información ver <!--¿Ver qué?-->.
+* **Alineamiento `alignment`:** _enum_ Preferencia de votación del ministro.
 
 #### Métodos
 * **Votar `Vote`:** _void_ Ministro vota respecto a la propuesta de proyecto. Si el proyecto es del mismo alineamiento del ministro, éste lo aprueba automáticamente. Si el proyecto no es del mismo alineamiento, el ministro vota al azar (50/50).
@@ -84,13 +84,15 @@ El jugador gana la partida cuando obtiene al menos **6 puntos de victoria**, sie
 * **Nivel `level`:** No implementado aún.
 * **Alineamiento `alignment`: **_enum_ Tipo de proyecto. Asociado a las preferencias de los ministros. Para más información ver <!--¿Ver qué?-->.
 
-# <!--Historia y Narrativa-->
 
 
 
-# <!--Niveles y progresión-->
-# <!--Interfaces-->
-# <!--Propuesta de audio-->
+
+# Interfaces
+# Propuesta de audio
+
+Durante el _gameplay_ hay una pista de audio loopeable que suena constantemente. Ésta tiene un aire bélico, militar, y cómico. Además se integran efectos de sonido para las distintas acciones. Por ejemplo al cambiar ministros, al atacar al enemigo, al llamar a votaciones, etc. Se agregan también efectos de sonido que aportan una ambientación de oficina.
+
 # Propuesta Visual
 El juego estará hecho en 3D, y tendrá un estilo _low-poly_. Ambientación que recuerda a la propaganda de Corea del Norte. Uso extenso del color rojo en menús, y de tipo _Konstruktor_.
 
@@ -175,6 +177,7 @@ _Mockup del entorno 3D (No funcional)_
 [Murmur 1.wav](https://freesound.org/people/jayfrosting/sounds/333395/)  
 [missile_launch_2](https://freesound.org/people/smcameron/sounds/51468/)  
 [Ricochet](https://www.storyblocks.com/audio/stock/ricochet-sg8xkhahidhk0wxxqdu.html)
+
 ## Música
 [National Spirit](https://www.storyblocks.com/audio/stock/national-spirit-semlm40nupbk0wy2qy0.html)  
 [When Johnny Comes Marching](https://www.storyblocks.com/audio/stock/when-johnny-comes-marching-hxhg6er2ivhk0wy1lho.html)  
