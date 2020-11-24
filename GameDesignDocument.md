@@ -9,7 +9,7 @@ Paralelo 2 - Taller de creación de videojuegos
 Vicente Trincado
 Sebastián Meneses
 
-Actualización: Noviembre 16, 2020
+Actualización: Noviembre 24, 2020
 
 
 # Tabla de contenidos
@@ -93,6 +93,17 @@ El jugador gana la partida cuando obtiene al menos **6 puntos de victoria**, sie
 # <!--Propuesta de audio-->
 # Propuesta Visual
 El juego estará hecho en 3D, y tendrá un estilo _low-poly_. Ambientación que recuerda a la propaganda de Corea del Norte. Uso extenso del color rojo en menús, y de tipo _Konstruktor_.
+
+Los personajes como los ministros, o el enemigo son humanoides, y tienen proporciones de bebé. Su piel es de un color celeste poco saturado. La cabeza de los ministros es un modelo separado del cuerpo, puesto que éstos cambian de color su cabeza para significar su alineamiento.
+
+![_Concept Art_ de los ministros](MiscArt/MinistroREF.png)
+
+_Concept art de los ministros_
+
+
+
+![Concepto preliminar del enemigo](MiscArt/conceptEnemigo.png)
+
 # Bitácora de Iteraciones
 ## Prototipo 1 - Oct w3
 El objetivo de este primer prototipo es descubrir y probar el _core loop_, implementando, completando, y desafiando las ideas propuestas en la fase inicial del proyecto. Se omiten algunas funciones planeadas en virtud del tiempo.
