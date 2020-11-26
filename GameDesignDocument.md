@@ -182,10 +182,11 @@ _Mockup del entorno 3D (No funcional)_
 [Ricochet](https://www.storyblocks.com/audio/stock/ricochet-sg8xkhahidhk0wxxqdu.html)
 
 ## Música
+[Amazing Plan](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100737)  
 [National Spirit](https://www.storyblocks.com/audio/stock/national-spirit-semlm40nupbk0wy2qy0.html)  
 [When Johnny Comes Marching](https://www.storyblocks.com/audio/stock/when-johnny-comes-marching-hxhg6er2ivhk0wy1lho.html)  
 [Off Balance](https://www.storyblocks.com/audio/stock/off-balance-bgdvcp62udhk0wy0iir.html)  
-_Trincado's favourite_[Spaghetti Gangster](https://www.storyblocks.com/audio/stock/spaghetti-gangster-bl1zkfu-oask4bq6h3c.html)  
+[Spaghetti Gangster](https://www.storyblocks.com/audio/stock/spaghetti-gangster-bl1zkfu-oask4bq6h3c.html)  
 [Pleasant and bouncy strings for light comedies, animation and children's content
 Gerardo Garcia Jr.
 ](https://www.storyblocks.com/audio/stock/pleasant-and-bouncy-strings-for-light-comedies-animation-and-childrens-content-hhciaudzwkdz2ckld.html)  
