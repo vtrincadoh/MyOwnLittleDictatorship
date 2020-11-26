@@ -336,6 +336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair_Conference (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1862155987202886, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     - target: {fileID: 4629217466970814, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.184
@@ -435,9 +439,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 3.0051844
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5025933, z: 0}
 --- !u!23 &18894129
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -831,6 +835,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cabinet_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 158594, guid: f2f081c540b0d8f4aa94075355020bfd, type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     - target: {fileID: 468408, guid: f2f081c540b0d8f4aa94075355020bfd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.14057925
@@ -909,7 +917,7 @@ GameObject:
   - component: {fileID: 46959871}
   m_Layer: 0
   m_Name: Wall (4)
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1335,6 +1343,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VotingDevice (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
 --- !u!4 &84446753 stripped
@@ -1357,7 +1370,7 @@ GameObject:
   - component: {fileID: 111599710}
   m_Layer: 0
   m_Name: Wall (6)
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1484,9 +1497,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 3.0155346
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.50776744, z: 0}
 --- !u!23 &112833357
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2061,6 +2074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Storage_Rack_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 152222, guid: 34b8a5bfe71cc1844b2d95a6853d2630, type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     - target: {fileID: 475310, guid: 34b8a5bfe71cc1844b2d95a6853d2630, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.35
@@ -2235,9 +2252,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 2.6740928
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.33704644, z: 0}
 --- !u!23 &208013398
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3547,7 +3564,7 @@ GameObject:
   - component: {fileID: 311782252}
   m_Layer: 0
   m_Name: Scene (1)
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4065,6 +4082,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VotingDevice (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
 --- !u!4 &387581986 stripped
@@ -4089,6 +4111,10 @@ PrefabInstance:
     - target: {fileID: 1862155987202886, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
       propertyPath: m_Name
       value: Chair_Conference (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1862155987202886, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
+      propertyPath: m_TagString
+      value: Scene
       objectReference: {fileID: 0}
     - target: {fileID: 4629217466970814, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4213,6 +4239,10 @@ PrefabInstance:
     - target: {fileID: 1862155987202886, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
       propertyPath: m_Name
       value: Chair_Conference (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1862155987202886, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
+      propertyPath: m_TagString
+      value: Scene
       objectReference: {fileID: 0}
     - target: {fileID: 4629217466970814, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4658,7 +4688,7 @@ GameObject:
   - component: {fileID: 436060252}
   m_Layer: 0
   m_Name: Wall (2)
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5247,6 +5277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair_Conference (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1862155987202886, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     - target: {fileID: 4629217466970814, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.466
@@ -5457,6 +5491,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VotingDevice (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
 --- !u!4 &501824921 stripped
@@ -5547,6 +5586,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VotingDevice (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
 --- !u!4 &504480843 stripped
@@ -5636,6 +5680,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VotingDevice (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
@@ -6124,7 +6173,7 @@ GameObject:
   - component: {fileID: 561944473}
   m_Layer: 0
   m_Name: Wall (3)
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6407,7 +6456,7 @@ GameObject:
   - component: {fileID: 594385536}
   m_Layer: 0
   m_Name: Wall (5)
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6678,6 +6727,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VotingDevice (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
@@ -7390,7 +7444,7 @@ GameObject:
   - component: {fileID: 669295444}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7525,9 +7579,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 3.0537314
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5268666, z: 0}
 --- !u!23 &675838544
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7612,6 +7666,10 @@ PrefabInstance:
     - target: {fileID: 1055603530103732, guid: 4e57406919c506c42a59b989fd5d8c4d, type: 3}
       propertyPath: m_Name
       value: Chair_Office_Turquoise
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055603530103732, guid: 4e57406919c506c42a59b989fd5d8c4d, type: 3}
+      propertyPath: m_TagString
+      value: Scene
       objectReference: {fileID: 0}
     - target: {fileID: 4057663599375532, guid: 4e57406919c506c42a59b989fd5d8c4d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8274,6 +8332,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VotingDevice (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
@@ -10132,6 +10195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laptop_Off
       objectReference: {fileID: 0}
+    - target: {fileID: 1179622459644578, guid: f0c2d9c0796a76d428d02150209c6d26, type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     - target: {fileID: 4239241825834946, guid: f0c2d9c0796a76d428d02150209c6d26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.016608024
@@ -10184,6 +10251,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.8532423
       objectReference: {fileID: 0}
+    - target: {fileID: 65763723568189142, guid: f0c2d9c0796a76d428d02150209c6d26,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c2d9c0796a76d428d02150209c6d26, type: 3}
 --- !u!1 &1011228049
@@ -10231,7 +10303,7 @@ GameObject:
   - component: {fileID: 1030100578}
   m_Layer: 0
   m_Name: Wall (2)
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10617,7 +10689,7 @@ GameObject:
   - component: {fileID: 1061753256}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10738,6 +10810,10 @@ PrefabInstance:
     - target: {fileID: 1862155987202886, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
       propertyPath: m_Name
       value: Chair_Conference
+      objectReference: {fileID: 0}
+    - target: {fileID: 1862155987202886, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
+      propertyPath: m_TagString
+      value: Scene
       objectReference: {fileID: 0}
     - target: {fileID: 4629217466970814, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11510,7 +11586,7 @@ GameObject:
   - component: {fileID: 1183390524}
   m_Layer: 0
   m_Name: Wall (3)
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12483,6 +12559,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Storage_Rack_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 152222, guid: 34b8a5bfe71cc1844b2d95a6853d2630, type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     - target: {fileID: 475310, guid: 34b8a5bfe71cc1844b2d95a6853d2630, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.259644
@@ -12617,6 +12697,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VotingDevice (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
 --- !u!4 &1362734075 stripped
@@ -12668,6 +12753,10 @@ PrefabInstance:
     - target: {fileID: 1289936835854364, guid: 2e14b1c602571994f82e0f629cc6312f, type: 3}
       propertyPath: m_Name
       value: Table_Conference
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289936835854364, guid: 2e14b1c602571994f82e0f629cc6312f, type: 3}
+      propertyPath: m_TagString
+      value: Scene
       objectReference: {fileID: 0}
     - target: {fileID: 4227113826914546, guid: 2e14b1c602571994f82e0f629cc6312f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13374,7 +13463,7 @@ GameObject:
   - component: {fileID: 1437763179}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13663,6 +13752,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VotingDevice (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
@@ -14035,6 +14129,10 @@ PrefabInstance:
     - target: {fileID: 1862155987202886, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
       propertyPath: m_Name
       value: Chair_Conference (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1862155987202886, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
+      propertyPath: m_TagString
+      value: Scene
       objectReference: {fileID: 0}
     - target: {fileID: 4629217466970814, guid: 7d255bce5b634604dbc1ed9f1e878f20, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14692,7 +14790,7 @@ GameObject:
   - component: {fileID: 1593888373}
   m_Layer: 0
   m_Name: Wall (4)
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15910,9 +16008,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 2.7361996
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.36809906, z: 0}
 --- !u!23 &1720970909
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16237,6 +16335,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VotingDevice (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
 --- !u!4 &1751235360 stripped
@@ -16516,7 +16619,7 @@ GameObject:
   - component: {fileID: 1773933474}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17070,7 +17173,7 @@ GameObject:
   - component: {fileID: 1817401838}
   m_Layer: 0
   m_Name: Wall (7)
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17197,9 +17300,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 3.0504673
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5252333, z: 0}
 --- !u!23 &1844879012
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17351,7 +17454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849876404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.802, z: -21.02}
+  m_LocalPosition: {x: 0, y: 1.61, z: -18.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1363887270}
@@ -17469,6 +17572,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VotingDevice
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
 --- !u!4 &1856895249 stripped
@@ -17536,7 +17644,7 @@ GameObject:
   - component: {fileID: 1872900847}
   m_Layer: 0
   m_Name: Wall (5)
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17906,9 +18014,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 2.5684245
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.28421226, z: 0}
 --- !u!23 &1923204061
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18660,6 +18768,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VotingDevice (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
 --- !u!4 &1968010808 stripped
@@ -19091,6 +19204,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VotingDevice
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
@@ -19550,7 +19668,7 @@ GameObject:
   - component: {fileID: 2081970907}
   m_Layer: 0
   m_Name: Wall (1)
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19844,7 +19962,7 @@ GameObject:
   - component: {fileID: 2110436295}
   m_Layer: 0
   m_Name: Wall (1)
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20082,6 +20200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VotingDevice (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91f497b024febe54496597178435437d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Scene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f497b024febe54496597178435437d, type: 3}
