@@ -89,6 +89,9 @@ El jugador gana la partida cuando obtiene al menos **6 puntos de victoria**, sie
 
 
 # Interfaces
+
+
+
 # Propuesta de audio
 
 Durante el _gameplay_ hay una pista de audio loopeable que suena constantemente. Ésta tiene un aire bélico, militar, y cómico. Además se integran efectos de sonido para las distintas acciones. Por ejemplo al cambiar ministros, al atacar al enemigo, al llamar a votaciones, etc. Se agregan también efectos de sonido que aportan una ambientación de oficina.
