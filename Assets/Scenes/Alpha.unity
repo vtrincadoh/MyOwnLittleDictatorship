@@ -5708,7 +5708,7 @@ GameObject:
   - component: {fileID: 516123928}
   m_Layer: 0
   m_Name: TV
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18795,7 +18795,7 @@ GameObject:
   - component: {fileID: 1971403337}
   m_Layer: 0
   m_Name: Screen
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
