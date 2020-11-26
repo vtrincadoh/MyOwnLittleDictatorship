@@ -16,4 +16,14 @@ public class C_MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+   public void ReturnCredits()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
