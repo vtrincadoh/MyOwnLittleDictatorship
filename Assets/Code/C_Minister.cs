@@ -22,6 +22,7 @@ public class C_Minister : MonoBehaviour
     {
         GenerateChar();
         posName.text = myPuesto.ToString();
+        myVote.color = Color.gray;
     }
 
     public void GenerateChar()
@@ -84,7 +85,7 @@ public class C_Minister : MonoBehaviour
         if (descision) sanity -= rateOfSanityLost;
         if (descision) myVote.color = Color.green;
         else myVote.color = Color.red;
-        //Invoke("ResetColor", 3f);
+        Invoke("ResetColor", 3f);
         return descision;
     }
 
