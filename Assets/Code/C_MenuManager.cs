@@ -12,18 +12,32 @@ public class C_MenuManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void Tutorial()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void Options()
+    {
+        SceneManager.LoadScene(3);
+    }
     public void Play()
     {
         SceneManager.LoadScene(1);
     }
 
-    public void LoadCredits()
+    public void Credits()
     {
         SceneManager.LoadScene(2);
     }
 
-   public void ReturnCredits()
+    public void Title()
     {
         SceneManager.LoadScene(0);
     }
+    public void Ping()
+    {
+        Debug.Log("Pong");
+    }
+
 }
