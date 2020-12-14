@@ -157,18 +157,19 @@ _Mockup del entorno 3D (No funcional)_
 # Referencias
 # _Assets_ externos
 
-## Unity Asset store
+## _Unity Asset store_
 [JSON .NET For Unity](https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-11347)  
 [Full Menu System](https://assetstore.unity.com/packages/tools/gui/full-menu-system-free-158919)  
 [Voxel Wooden Funiture](https://assetstore.unity.com/packages/3d/props/furniture/voxel-wooden-funiture-67811)  
 [City Voxel Pack](https://assetstore.unity.com/packages/3d/environments/urban/city-voxel-pack-136141)  
-[Low Poly Office Props - LITE](https://assetstore.unity.com/packages/3d/environments/low-poly-office-props-lite-131438)  
-[Snaps Prototype | Office](https://assetstore.unity.com/packages/3d/environments/snaps-prototype-office-137490)  
+[Low Poly Office Props - LITE](https://assetstore.unity.com/packages/3d/environments/low-poly-office-props-lite-131438)  [En uso]
+[Snaps Prototype | Office](https://assetstore.unity.com/packages/3d/environments/snaps-prototype-office-137490)  [En uso]
 [Cartoon Low Poly City Pack Lite](https://assetstore.unity.com/packages/3d/environments/urban/cartoon-low-poly-city-pack-lite-166617)  
 [Lowpoly Modern City Buildings Set](https://assetstore.unity.com/packages/3d/environments/urban/lowpoly-modern-city-buildings-set-64427)  
 [Low Poly Storage Pack](https://assetstore.unity.com/packages/3d/environments/urban/low-poly-storage-pack-101732)  
 [Low Poly Road Pack](https://assetstore.unity.com/packages/3d/environments/roadways/low-poly-road-pack-67288)  
-## SFX
+
+## _SFX_
 [Falling, Comedic, A.wav](https://freesound.org/people/InspectorJ/sounds/360662/)  
 [Mouse click sounds](https://freesound.org/people/Masgame/sounds/347544/)  
 [dot matrix printer.MP3](https://freesound.org/people/DisasterServices/sounds/320008/)  
@@ -182,7 +183,7 @@ _Mockup del entorno 3D (No funcional)_
 [Ricochet](https://www.storyblocks.com/audio/stock/ricochet-sg8xkhahidhk0wxxqdu.html)
 
 ## Música
-[Amazing Plan](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100737)  
+[Amazing Plan](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100737)  [En uso]
 [National Spirit](https://www.storyblocks.com/audio/stock/national-spirit-semlm40nupbk0wy2qy0.html)  
 [When Johnny Comes Marching](https://www.storyblocks.com/audio/stock/when-johnny-comes-marching-hxhg6er2ivhk0wy1lho.html)  
 [Off Balance](https://www.storyblocks.com/audio/stock/off-balance-bgdvcp62udhk0wy0iir.html)  
