@@ -21,7 +21,8 @@ public class C_3DRelatedButton : MonoBehaviour
 
     public void Selected()
     {
-        Debug.Log("Selected");
+        Debug.Log("Selected button " + thisButton.name);
+
         if (canBeInteracted) thisButton.onClick.Invoke();
     }
 }

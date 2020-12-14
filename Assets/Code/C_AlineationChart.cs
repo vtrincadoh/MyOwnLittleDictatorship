@@ -19,12 +19,15 @@ public class C_AlineationChart : MonoBehaviour
         self3d.transform.SetParent(null);
         self = this.gameObject;
         self3d.transform.position = typePlacement.transform.position;
-        self3d.transform.rotation = Quaternion.Euler(new Vector3(25, 0, 0));
+        self3d.transform.rotation = Quaternion.Euler(new Vector3(15, 0, 0));
         Debug.Log("Self is " + self.name);
+        Debug.Log(Minister.GetComponent<C_Minister>().ministerName + "Changing ");
+        //Debug.Log(Minister.GetComponent<C_Minister>().ministerName + "Changing ");
     }
 
     public void Change(Button type)
     {
+        
         switch (type.name)
         {
             case "BPatriota":
@@ -33,7 +36,7 @@ public class C_AlineationChart : MonoBehaviour
                 Minister.GetComponent<Image>().color = Color.red;
                 Debug.Log("Cambiado a Patriora");
                 //phase.ChangeBool();
-                Destroy(self,1f);
+                Destroy(self, 0.2f);
                 break;
             case "BHumanista":
                 self3d.transform.SetParent(this.gameObject.transform);
@@ -41,7 +44,7 @@ public class C_AlineationChart : MonoBehaviour
                 Minister.GetComponent<Image>().color = Color.blue;
                 Debug.Log("Cambiado a Humanista");
                 //phase.ChangeBool();
-                Destroy(self,1f);
+                Destroy(self, 0.2f);
                 break;
             case "BEconomico":
                 self3d.transform.SetParent(this.gameObject.transform);
@@ -49,7 +52,7 @@ public class C_AlineationChart : MonoBehaviour
                 Minister.GetComponent<Image>().color = Color.green;
                 Debug.Log("Cambiado a Economico");
                 //phase.ChangeBool();
-                Destroy(self,1f);
+                Destroy(self,0.2f);
                 break;
             default:
                 break;
