@@ -46,7 +46,6 @@ public class C_3DPlayer : MonoBehaviour
         Debug.Log("Clicked");
         RaycastHit hit;
         Ray ray = pCamera.ScreenPointToRay(Input.mousePosition);
-
         if (Physics.Raycast(ray, out hit))
         {
             GameObject objectHit = hit.collider.gameObject;
@@ -54,11 +53,14 @@ public class C_3DPlayer : MonoBehaviour
             //Do something with gameobject
             if(objectHit.tag != "Scene")
             {
+                objectHit.GetComponent<Button>().onClick.Invoke();
+                /*
                 if (objectHit.GetComponent<C_3DRelatedButton>().canBeInteracted)
                 {
                     Debug.Log("Can be interacted with");
                     objectHit.GetComponent<C_3DRelatedButton>().Selected();
                 }
+                */
             }
         }
     }
