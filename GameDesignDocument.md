@@ -153,8 +153,6 @@ _Progreso de transición a entorno 3D (Funcional)_
 ![MockUp del entorno 3D](MiscArt\MockUpScene.png)
 _Mockup del entorno 3D (No funcional)_
 
-# Extras
-# Referencias
 # _Assets_ externos
 
 ## _Unity Asset store_
