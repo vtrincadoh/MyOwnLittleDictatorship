@@ -238,6 +238,11 @@ public class C_Phase : MonoBehaviour
         votingResult.SetActive(false);
         enemy.EnemyTurn();
         proyectsGenerated = !proyectsGenerated;
+        Invoke("Transicion2", 1.5f);
+    }
+
+    void Transicion2()
+    {
         resultPhases.SetActive(true);
     }
 }

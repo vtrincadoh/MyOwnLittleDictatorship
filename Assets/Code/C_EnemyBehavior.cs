@@ -75,12 +75,12 @@ public class C_EnemyBehavior : MonoBehaviour
                     break;
             }
         }
-        Invoke("cleanText", 1.5f);
+        Invoke("cleanText", 3.5f);
     }
 
     void cleanText()
     {
         actionGained.text = "";
-        Invoke("DisableEnemy", 0.5f);
+        Invoke("DisableEnemy", 1.5f);
     }
 }
