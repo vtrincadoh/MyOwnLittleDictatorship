@@ -11,6 +11,8 @@ public class C_EnemyBehavior : MonoBehaviour
 
     public GameObject player;
 
+    public Text actionGained;
+
     private void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -37,17 +39,20 @@ public class C_EnemyBehavior : MonoBehaviour
                 case 2: //Enemy attack player
                     if(enemyVictoryPointsVal != 0 && enemyResourcesPointsVal != 0)
                     {
+                        actionGained.text = "Enemy attacked you";
                         player.GetComponent<C_Phase>().victoryPointsVal--;
                     }
                     else
                     {
                         if(Random.Range(0, 1) == 0)
                         {
+                            actionGained.text = "Enemy gained victory points";
                             Debug.Log("Enemy took victory points");
                             enemyVictoryPointsVal++;
                         }
                         else
                         {
+                            actionGained.text = "Enemy gained resources points";
                             Debug.Log("Enemy took resources points");
                             enemyResourcesPointsVal++;
                         }
@@ -57,5 +62,11 @@ public class C_EnemyBehavior : MonoBehaviour
                     break;
             }
         }
+        Invoke("cleanText", 0.5f);
+    }
+
+    void cleanText()
+    {
+        actionGained.text = "";
     }
 }

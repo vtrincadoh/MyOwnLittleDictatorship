@@ -31,6 +31,10 @@ public class C_Phase : MonoBehaviour
     private bool notChanged;
     public Canvas OverlayCanvas;
 
+
+    //Tv canvas
+    public GameObject resultPhases,votingResult,enemyAction;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,7 +79,7 @@ public class C_Phase : MonoBehaviour
     }
 
     private void Update()
-    {
+    {  
         victoryPoints.value += victoryPointsVal;
         if (checkWinCondition())
         {
@@ -105,10 +109,13 @@ public class C_Phase : MonoBehaviour
         generator.EnableButtons();
         generator.GenerateProject();
         DisableUtilities();
+        resultPhases.SetActive(true);
+        enemyAction.SetActive(false);
     }
 
     public void phase2(GameObject button)
     {
+        resultPhases.SetActive(false);
         //Voting phase
         Debug.Log("Voting");
         voting.InvokeVoting(button);
@@ -146,10 +153,12 @@ public class C_Phase : MonoBehaviour
         if(voting.canAttack) attackButton.interactable = true;
         else attackButton.interactable = false;
         //Get dominant type and compare with proyect type
+        votingResult.SetActive(true);
     }
 
     public void phase4(GameObject m)
     {
+        votingResult.SetActive(false);
         Debug.Log(m.name + "pressed");
         //Change or Adoctrinate
         //Debug.Log("Changing");
@@ -222,6 +231,7 @@ public class C_Phase : MonoBehaviour
     public void ChangeBool()
     {
         enemy.EnemyTurn();
+        enemyAction.SetActive(true);
         proyectsGenerated = !proyectsGenerated;
     }
 }

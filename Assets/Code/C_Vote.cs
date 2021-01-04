@@ -15,6 +15,9 @@ public class C_Vote : MonoBehaviour
 
     public bool canChooseMinisterType,canAttack;
 
+    public Image canvasVote;
+    public Text canvasText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +33,16 @@ public class C_Vote : MonoBehaviour
         if (yes > no)
         {
             FinalVeredict.color = Color.green;
+            canvasVote.color = Color.green;
+            canvasText.text = "Se aprueba";
             Debug.Log("Se Aprueba");
             PointTypeManager(al);
         } //Hacer do while
         else if (yes < no)
         {
             FinalVeredict.color = Color.red;
+            canvasVote.color = Color.red;
+            canvasText.text = "Se rechaza";
             Debug.Log("Se Rechaza");
         }
         else //Si hay empate se repite la votacion
@@ -43,11 +50,15 @@ public class C_Vote : MonoBehaviour
             results(al);
             if (yes > no){
                 FinalVeredict.color = Color.green;
+                canvasVote.color = Color.green;
+                canvasText.text = "Se aprueba";
                 Debug.Log("Se Aprueba");
                 PointTypeManager(al);
             }
             else {
+                canvasVote.color = Color.red;
                 FinalVeredict.color = Color.red;
+                canvasText.text = "Se rechaza";
                 Debug.Log("Se Rechaza");
             }
         }
