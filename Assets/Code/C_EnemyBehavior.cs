@@ -34,7 +34,6 @@ public class C_EnemyBehavior : MonoBehaviour
 
     public void EnemyTurn()
     {
-        Invoke("Enableenemy", 0.5f);
         int getsPoint = Random.Range(0, 100);
         if(getsPoint >= AproovedOrRejectedPointRange)
         {

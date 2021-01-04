@@ -207,6 +207,7 @@ public class C_Phase : MonoBehaviour
                 Invoke("ChangeBool", 1f);
             }
         }
+        enemyAction.SetActive(true);
     }
 
     bool checkWinCondition()
