@@ -11,7 +11,19 @@ public class C_EnemyBehavior : MonoBehaviour
 
     public GameObject player;
 
+    public GameObject points, enemyAction; 
+
     public Text actionGained;
+
+    void Enableenemy()
+    {
+        enemyAction.SetActive(true);
+    }
+
+    void DisableEnemy()
+    {
+        enemyAction.SetActive(false);
+    }
 
     private void Update()
     {
@@ -22,6 +34,7 @@ public class C_EnemyBehavior : MonoBehaviour
 
     public void EnemyTurn()
     {
+        Invoke("Enableenemy", 0.5f);
         int getsPoint = Random.Range(0, 100);
         if(getsPoint >= AproovedOrRejectedPointRange)
         {
@@ -62,11 +75,12 @@ public class C_EnemyBehavior : MonoBehaviour
                     break;
             }
         }
-        Invoke("cleanText", 0.5f);
+        Invoke("cleanText", 1.5f);
     }
 
     void cleanText()
     {
         actionGained.text = "";
+        Invoke("DisableEnemy", 0.5f);
     }
 }

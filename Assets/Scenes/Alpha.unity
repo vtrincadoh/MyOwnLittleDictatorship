@@ -14027,7 +14027,7 @@ GameObject:
   - component: {fileID: 1288611161}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15889,6 +15889,8 @@ MonoBehaviour:
   enemyResourcesPointsVal: 0
   AproovedOrRejectedPointRange: 60
   player: {fileID: 0}
+  points: {fileID: 597603118}
+  enemyAction: {fileID: 102623062}
   actionGained: {fileID: 53552625}
 --- !u!4 &1467144558
 Transform:

@@ -109,13 +109,11 @@ public class C_Phase : MonoBehaviour
         generator.EnableButtons();
         generator.GenerateProject();
         DisableUtilities();
-        resultPhases.SetActive(true);
-        enemyAction.SetActive(false);
     }
 
     public void phase2(GameObject button)
     {
-        resultPhases.SetActive(false);
+        resultPhases.SetActive(true);
         //Voting phase
         Debug.Log("Voting");
         voting.InvokeVoting(button);
@@ -139,13 +137,14 @@ public class C_Phase : MonoBehaviour
         aPatriotic.text = donePatriotic.ToString();
         aEconomic.text = doneEconomic.ToString();
         aHumanist.text = doneHumanista.ToString();
-
+        
         generator.DisableButtons();
         Invoke("phase3", 1f);
     }
 
     public void phase3()
     {
+        resultPhases.SetActive(true);
         //Review results
         Debug.Log("Reviewing");
         EnableUtilities();
@@ -153,12 +152,18 @@ public class C_Phase : MonoBehaviour
         if(voting.canAttack) attackButton.interactable = true;
         else attackButton.interactable = false;
         //Get dominant type and compare with proyect type
+        Invoke("Transicion1", 0.5f);
+
+    }
+
+    void Transicion1()
+    {
+        resultPhases.SetActive(false);
         votingResult.SetActive(true);
     }
 
     public void phase4(GameObject m)
     {
-        votingResult.SetActive(false);
         Debug.Log(m.name + "pressed");
         //Change or Adoctrinate
         //Debug.Log("Changing");
@@ -230,8 +235,9 @@ public class C_Phase : MonoBehaviour
 
     public void ChangeBool()
     {
+        votingResult.SetActive(false);
         enemy.EnemyTurn();
-        enemyAction.SetActive(true);
         proyectsGenerated = !proyectsGenerated;
+        resultPhases.SetActive(true);
     }
 }
