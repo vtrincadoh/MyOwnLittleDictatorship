@@ -23,6 +23,13 @@ public class C_EnemyBehavior : MonoBehaviour
     void DisableEnemy()
     {
         enemyAction.SetActive(false);
+        Invoke("Transicion1_1", 0.2f);
+    }
+
+    private void Awake()
+    {
+        actionGained.GetComponent<Text>().text = "";
+        //DisableEnemy();
     }
 
     private void Update()
@@ -34,6 +41,7 @@ public class C_EnemyBehavior : MonoBehaviour
 
     public void EnemyTurn()
     {
+        Enableenemy();
         int getsPoint = Random.Range(0, 100);
         if(getsPoint >= AproovedOrRejectedPointRange)
         {
@@ -51,20 +59,20 @@ public class C_EnemyBehavior : MonoBehaviour
                 case 2: //Enemy attack player
                     if(enemyVictoryPointsVal != 0 && enemyResourcesPointsVal != 0)
                     {
-                        actionGained.text = "Enemy attacked you";
+                        actionGained.GetComponent<Text>().text = "Enemy attacked you";
                         player.GetComponent<C_Phase>().victoryPointsVal--;
                     }
                     else
                     {
                         if(Random.Range(0, 1) == 0)
                         {
-                            actionGained.text = "Enemy gained victory points";
+                            actionGained.GetComponent<Text>().text = "Enemy gained victory points";
                             Debug.Log("Enemy took victory points");
                             enemyVictoryPointsVal++;
                         }
                         else
                         {
-                            actionGained.text = "Enemy gained resources points";
+                            actionGained.GetComponent<Text>().text = "Enemy gained resources points";
                             Debug.Log("Enemy took resources points");
                             enemyResourcesPointsVal++;
                         }
@@ -74,12 +82,17 @@ public class C_EnemyBehavior : MonoBehaviour
                     break;
             }
         }
-        Invoke("cleanText", 3.5f);
+        else actionGained.GetComponent<Text>().text = "Enemy failed to aproved a project";
+        Invoke("cleanText", 0.8f);
     }
 
     void cleanText()
     {
-        actionGained.text = "";
-        Invoke("DisableEnemy", 1.5f);
+        Invoke("DisableEnemy", 0.2f);
+    }
+    
+    void Transicion1_1()
+    {
+        points.SetActive(true);
     }
 }

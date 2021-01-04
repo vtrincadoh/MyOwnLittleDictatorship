@@ -35,6 +35,8 @@ public class C_Phase : MonoBehaviour
     //Tv canvas
     public GameObject resultPhases,votingResult,enemyAction;
 
+    public GameObject AlineationChartGameObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -101,6 +103,7 @@ public class C_Phase : MonoBehaviour
 
     public void phase1()
     {
+        AlineationChartGameObject.SetActive(false);
         Debug.Log(string.Format("Actually you have {0} economic, {1} humanist and {2} patriotic proyects approved", doneEconomic, doneHumanista, donePatriotic));
         DisableMinisterButtons();
         attackButton.interactable = false;
@@ -152,19 +155,24 @@ public class C_Phase : MonoBehaviour
         if(voting.canAttack) attackButton.interactable = true;
         else attackButton.interactable = false;
         //Get dominant type and compare with proyect type
-        Invoke("Transicion1", 0.5f);
+        Invoke("Transicion1_1", 0.2f);
 
     }
 
-    void Transicion1()
+    void Transicion1_1()
     {
         resultPhases.SetActive(false);
+        Invoke("Transicion1_2", 0.2f);
+        
+    }
+    void Transicion1_2()
+    {
         votingResult.SetActive(true);
     }
 
     public void phase4(GameObject m)
     {
-        Debug.Log(m.name + "pressed");
+        Debug.Log(m.name + " pressed");
         //Change or Adoctrinate
         //Debug.Log("Changing");
         if(m.name == "Skip")
@@ -185,10 +193,11 @@ public class C_Phase : MonoBehaviour
         {
             if (voting.canChooseMinisterType)
             {
-                usingChart = Instantiate(AlineationChart, m.GetComponent<C_Minister>().transform);
+                //usingChart = Instantiate(AlineationChart);
+                AlineationChartGameObject.SetActive(true);
                 DisableMinisterButtons();
-                usingChart.GetComponent<C_AlineationChart>().Minister = m;
-                //usingChart.GetComponent<C_AlineationChart>().ministerGameObject = m.GetComponent<C_Minister>().minister3dGameObject;
+                AlineationChartGameObject.GetComponent<C_AlineationChart>().Minister = m;
+                //AlineationChartGameObject.GetComponent<C_AlineationChart>().ministerGameObject = m.GetComponent<C_Minister>().minister3dGameObject;
                 voting.canChooseMinisterType = false;
                 /*
                 if (chart.gameObject == null)
@@ -204,11 +213,22 @@ public class C_Phase : MonoBehaviour
             {
                 m.GetComponent<C_Minister>().GenerateChar();
                 DisableMinisterButtons();
-                Invoke("ChangeBool", 1f);
+                Invoke("Transicion2_1", 0.2f);
             }
         }
-        enemyAction.SetActive(true);
     }
+    public void Transicion2_1()
+    {
+        votingResult.SetActive(false);
+        Invoke("Transicion2_2", 1f);
+    }
+
+    void Transicion2_2()
+    {
+        enemyAction.SetActive(true);
+        Invoke("ChangeBool", 1f);
+    }
+
 
     bool checkWinCondition()
     {
@@ -236,14 +256,7 @@ public class C_Phase : MonoBehaviour
 
     public void ChangeBool()
     {
-        votingResult.SetActive(false);
         enemy.EnemyTurn();
         proyectsGenerated = !proyectsGenerated;
-        Invoke("Transicion2", 1.5f);
-    }
-
-    void Transicion2()
-    {
-        resultPhases.SetActive(true);
     }
 }

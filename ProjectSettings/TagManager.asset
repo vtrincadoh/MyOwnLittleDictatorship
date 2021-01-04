@@ -10,6 +10,7 @@ TagManager:
   - 3DMinister
   - 3DProject
   - Utilities
+  - Types
   layers:
   - Default
   - TransparentFX

@@ -49,18 +49,17 @@ public class C_3DPlayer : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             GameObject objectHit = hit.collider.gameObject;
-            Debug.Log("Hitted object named" + objectHit.name);
+            Debug.Log("Hitted object named " + objectHit.name);
             //Do something with gameobject
             if(objectHit.tag != "Scene")
             {
-                objectHit.GetComponent<Button>().onClick.Invoke();
-                /*
-                if (objectHit.GetComponent<C_3DRelatedButton>().canBeInteracted)
+                if(objectHit.tag == "Proyect")objectHit.GetComponent<Button>().onClick.Invoke();
+                else if (objectHit.tag == "Types") objectHit.GetComponent<Button>().onClick.Invoke();
+                else if (objectHit.GetComponent<C_3DRelatedButton>().canBeInteracted)
                 {
                     Debug.Log("Can be interacted with");
                     objectHit.GetComponent<C_3DRelatedButton>().Selected();
                 }
-                */
             }
         }
     }
