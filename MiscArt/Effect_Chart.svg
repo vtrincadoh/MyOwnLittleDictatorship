@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="Effect_Chart.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 210 297"
+   height="297mm"
+   width="210mm">
+  <defs
+     id="defs2">
+    <rect
+       id="rect986"
+       height="18.174327"
+       width="72.964581"
+       y="150.20547"
+       x="341.30319" />
+    <rect
+       id="rect980"
+       height="18.040693"
+       width="23.519718"
+       y="141.38558"
+       x="314.0417" />
+    <rect
+       id="rect942"
+       height="19.276786"
+       width="99.029762"
+       y="141.3631"
+       x="236.99107" />
+    <rect
+       id="rect920"
+       height="30.238077"
+       width="120.19587"
+       y="137.96131"
+       x="98.27381" />
+    <rect
+       id="rect902"
+       height="34.2105"
+       width="100.49334"
+       y="80.715397"
+       x="280.09846" />
+    <rect
+       id="rect861"
+       height="36.883195"
+       width="130.42753"
+       y="84.457171"
+       x="78.577241" />
+    <rect
+       x="78.57724"
+       y="84.457169"
+       width="155.55088"
+       height="29.399647"
+       id="rect861-1" />
+    <rect
+       x="78.57724"
+       y="84.457169"
+       width="130.42754"
+       height="36.883194"
+       id="rect874" />
+    <rect
+       x="98.27381"
+       y="137.96131"
+       width="120.19587"
+       height="30.238077"
+       id="rect928" />
+    <rect
+       id="rect934"
+       height="30.238077"
+       width="120.19587"
+       y="137.96131"
+       x="98.27381" />
+    <rect
+       x="236.99107"
+       y="141.3631"
+       width="99.029762"
+       height="19.276786"
+       id="rect950" />
+    <rect
+       x="236.99107"
+       y="141.3631"
+       width="99.029762"
+       height="19.276786"
+       id="rect960" />
+    <rect
+       id="rect962"
+       height="19.276786"
+       width="99.029762"
+       y="141.3631"
+       x="236.99107" />
+    <rect
+       id="rect968"
+       height="19.276786"
+       width="99.029762"
+       y="141.3631"
+       x="236.99107" />
+    <rect
+       x="236.99107"
+       y="141.3631"
+       width="177.07246"
+       height="48.676434"
+       id="rect974" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-9"
+     inkscape:window-x="69"
+     inkscape:window-height="1051"
+     inkscape:window-width="1842"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="573.11655"
+     inkscape:cx="726.55262"
+     inkscape:zoom="0.49497475"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <rect
+       y="30.302223"
+       x="18.673325"
+       height="283.10416"
+       width="440.53125"
+       id="rect833"
+       style="fill:#d4d2bd;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.4" />
+    <rect
+       y="131.13098"
+       x="72.562889"
+       height="37.068409"
+       width="146.21991"
+       id="rect912"
+       style="opacity:0.7;fill:#c83737;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       transform="scale(0.26458333)"
+       d="M 179.80664,230.31445 V 1068.7422 H 1626.3457 V 230.31445 Z m 24.24414,22.34571 H 1602.1016 V 1046.3945 H 204.05078 Z"
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.29134"
+       id="rect837" />
+    <rect
+       y="168.19939"
+       x="72.193451"
+       height="43.845242"
+       width="146.27623"
+       id="rect914"
+       style="opacity:0.7;fill:#71c837;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" />
+    <rect
+       y="212.04463"
+       x="72.193451"
+       height="37.115429"
+       width="146.66634"
+       id="rect916"
+       style="opacity:0.7;fill:#2c89a0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.955578;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       id="rect837-5"
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.99365"
+       d="M 66.811154,127.80948 V 252.43455 H 409.99148 V 127.80948 Z m 5.751737,3.3215 H 404.23976 V 249.11275 H 72.562891 Z" />
+    <text
+       style="font-style:normal;font-weight:normal;font-size:25.4px;line-height:0;font-family:sans-serif;white-space:pre;shape-inside:url(#rect861);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text859"
+       xml:space="preserve"><tspan
+         x="78.578125"
+         y="105.35049"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.35;font-family:Konstruktor;-inkscape-font-specification:Konstruktor">BILL TYPE</tspan></tspan></text>
+    <text
+       transform="translate(38.486812,1.4624559)"
+       style="font-style:normal;font-weight:normal;font-size:25.4px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect902);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text900"
+       xml:space="preserve"><tspan
+         x="280.09766"
+         y="103.88803"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:Konstruktor;-inkscape-font-specification:Konstruktor">EFFECT</tspan></tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       id="path906"
+       d="M 218.8598,130.92408 V 251.09776"
+       style="fill:#000000;stroke:#000000;stroke-width:1.7519;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       id="path908"
+       d="M 72.193451,168.19939 H 406.40602"
+       style="fill:none;stroke:#000000;stroke-width:2.02326;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       style="fill:#ff0000;stroke:#000000;stroke-width:2.02449;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 71.74669,212.04463 H 406.36016"
+       id="path910" />
+    <text
+       transform="translate(-15.497024,13.985119)"
+       y="0"
+       x="33.151695"
+       style="font-style:normal;font-weight:normal;font-size:16.9333px;line-height:0;font-family:sans-serif;letter-spacing:0.854604px;white-space:pre;shape-inside:url(#rect920);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text918"
+       xml:space="preserve"><tspan
+         x="118.72137"
+         y="142.82639"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:Konstruktor;-inkscape-font-specification:Konstruktor;text-align:center;text-anchor:middle">Patriotic</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text926"
+       style="font-style:normal;font-weight:normal;font-size:16.9333px;line-height:0;font-family:sans-serif;letter-spacing:0.854604px;white-space:pre;shape-inside:url(#rect928);fill:#000000;fill-opacity:1;stroke:none;"
+       x="33.151695"
+       y="0"
+       transform="translate(-15.497024,52.160714)"><tspan
+         x="118.40453"
+         y="142.82639"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:Konstruktor;-inkscape-font-specification:Konstruktor;text-align:center;text-anchor:middle">Economic</tspan></tspan></text>
+    <text
+       transform="translate(-15.497024,96.005952)"
+       y="0"
+       x="33.151695"
+       style="font-style:normal;font-weight:normal;font-size:16.9333px;line-height:0;font-family:sans-serif;letter-spacing:0.854604px;white-space:pre;shape-inside:url(#rect934);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text932"
+       xml:space="preserve"><tspan
+         x="111.3157"
+         y="142.82639"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:Konstruktor;-inkscape-font-specification:Konstruktor;text-align:center;text-anchor:middle">Humanistic</tspan></tspan></text>
+    <path
+       id="path938"
+       d="M 323.78522,130.16026 V 168.3798"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       transform="translate(-10.96131,2.0993261)"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect942);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text940"
+       xml:space="preserve"><tspan
+         x="236.99023"
+         y="151.01875"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bookman Old Style';-inkscape-font-specification:'Bookman Old Style'">+1 Victory Point</tspan></tspan></text>
+    <text
+       y="0"
+       x="16.719856"
+       xml:space="preserve"
+       id="text948"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect950);fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(74.839285,-3.6507922)"><tspan
+         x="269.77308"
+         y="151.01875"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bookman Old Style';-inkscape-font-specification:'Bookman Old Style';text-align:center;text-anchor:middle">Attack</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text954"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect960);fill:#000000;fill-opacity:1;stroke:none;"
+       transform="translate(-10.96131,2.0993261)"><tspan
+         x="236.99023"
+         y="151.01875"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bookman Old Style';-inkscape-font-specification:'Bookman Old Style'">+1 Victory Point</tspan></tspan></text>
+    <text
+       transform="translate(32.839406,41.404048)"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect968);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text966"
+       xml:space="preserve"><tspan
+         x="236.99023"
+         y="151.01875"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bookman Old Style';-inkscape-font-specification:'Bookman Old Style'">+1 Resource Point</tspan></tspan></text>
+    <text
+       y="0"
+       x="85.664886"
+       xml:space="preserve"
+       id="text972"
+       style="font-style:normal;font-weight:normal;font-size:9.17222px;line-height:1.35;font-family:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect974);fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(-13.504635,76.826362)"><tspan
+         x="240.27227"
+         y="150.18999"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:'Bookman Old Style';-inkscape-font-specification:'Bookman Old Style';text-align:center;text-anchor:middle">Allows you to change the alignment of </tspan></tspan><tspan
+         x="249.0862"
+         y="162.81499"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:'Bookman Old Style';-inkscape-font-specification:'Bookman Old Style';text-align:center;text-anchor:middle">a minister to one of your choosing</tspan></tspan></text>
+    <circle
+       r="10.205358"
+       cy="149.27003"
+       cx="323.78522"
+       id="path976"
+       style="opacity:1;fill:#d4d2bd;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <text
+       transform="translate(-2.2300205,0.72318397)"
+       y="0"
+       x="5.0823607"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect980);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text978"
+       xml:space="preserve"><tspan
+         x="320.50913"
+         y="151.04023"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bookman Old Style';-inkscape-font-specification:'Bookman Old Style';text-align:center;text-anchor:middle">or</tspan></tspan></text>
+    <text
+       transform="translate(-15.234363,1.3363476)"
+       y="0"
+       x="20.681767"
+       style="font-style:normal;font-weight:normal;font-size:7.76111px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect986);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text984"
+       xml:space="preserve"><tspan
+         x="356.41937"
+         y="157.28577"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Bookman Old Style';-inkscape-font-specification:'Bookman Old Style';text-align:center;text-anchor:middle">(cost: 1 RP)</tspan></tspan></text>
+  </g>
+</svg>
