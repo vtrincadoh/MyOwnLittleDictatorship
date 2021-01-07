@@ -14,9 +14,18 @@ public class C_PauseMenuManager : MonoBehaviour
         sc = SceneManager.GetActiveScene();
     }
 
-    private void PauseGame() //Pause Game
+    public void PauseGame() //Pause Game
     {
+        this.gameObject.SetActive(true);
         Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void ContinueGame() //Pause Game
+    {
+        this.gameObject.SetActive(false);
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Reload() //Restard game

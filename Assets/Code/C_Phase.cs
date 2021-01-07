@@ -23,6 +23,7 @@ public class C_Phase : MonoBehaviour
     public Slider victoryPoints;
     [Range(0.0f, 10.0f)] public int ResourcePointsVal;
     public Slider ResourcePoints;
+    public int MaxPoints;
 
     public Button attackButton; //Button For attack
 
@@ -37,6 +38,9 @@ public class C_Phase : MonoBehaviour
 
     public GameObject AlineationChartGameObject;
 
+    public GameObject pauseMenu;
+    private C_PauseMenuManager c_pause;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +49,8 @@ public class C_Phase : MonoBehaviour
         voting = gameObject.GetComponent<C_Vote>();
         minister = GameObject.FindGameObjectsWithTag("Minister");
         doneEconomic = doneHumanista = donePatriotic = 0;
+        victoryPoints.maxValue = MaxPoints;
+        c_pause = pauseMenu.GetComponent<C_PauseMenuManager>();
     }
 
     private void EnableMinisterButtons()
@@ -81,7 +87,20 @@ public class C_Phase : MonoBehaviour
     }
 
     private void Update()
-    {  
+    {
+        if (Input.GetKeyDown("escape"))
+        {
+            if (Time.timeScale == 1f)
+            {
+                Debug.Log("pause");
+                c_pause.PauseGame();
+            }
+            else if (Time.timeScale == 0f)
+            {
+                Debug.Log("continue");
+                c_pause.ContinueGame();
+            }
+        }
         victoryPoints.value += victoryPointsVal;
         if (checkWinCondition())
         {
@@ -234,14 +253,14 @@ public class C_Phase : MonoBehaviour
     {
         //Check if win condition meet
         bool flag = false;
-        if (victoryPointsVal == 10 && victoryPointsVal >= enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal + 2) flag = true;
+        if (victoryPointsVal == MaxPoints && victoryPointsVal >= enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal + 2) flag = true;
         return flag;
     }
 
     bool checkLostCondition()
     {
         bool flag = false;
-        if (enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal >= 10 && victoryPointsVal + 2 <= enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal) flag = true;
+        if (enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal >= MaxPoints && victoryPointsVal + 2 <= enemy.GetComponent<C_EnemyBehavior>().enemyVictoryPointsVal) flag = true;
         return flag;
     }
 
