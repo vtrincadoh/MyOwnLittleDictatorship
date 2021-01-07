@@ -12,7 +12,7 @@ public class C_MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void Tutorial()
+   public void Tutorial()
     {
         SceneManager.LoadScene(4);
     }
