@@ -29,14 +29,18 @@ public class C_EnemyBehavior : MonoBehaviour
     private void Awake()
     {
         actionGained.GetComponent<Text>().text = "";
+        enemyVictoryPoints.value = enemyVictoryPointsVal = 0;
+        enemyResourcesPoints.value = enemyResourcesPointsVal = 0;
         //DisableEnemy();
     }
 
     private void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        enemyResourcesPoints.value = enemyResourcesPointsVal = 0;
-        enemyResourcesPoints.value = enemyResourcesPointsVal = 0;
+        enemyVictoryPoints.value = enemyVictoryPointsVal;
+        enemyResourcesPoints.value = enemyResourcesPointsVal;
+        Mathf.Clamp(enemyVictoryPoints.value, 0, 6);
+        Mathf.Clamp(enemyResourcesPoints.value, 0, 10);
     }
 
     public void EnemyTurn()

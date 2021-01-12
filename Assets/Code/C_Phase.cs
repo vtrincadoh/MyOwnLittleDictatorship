@@ -101,6 +101,8 @@ public class C_Phase : MonoBehaviour
                 c_pause.ContinueGame();
             }
         }
+        Mathf.Clamp(victoryPoints.value, 0, MaxPoints);
+        Mathf.Clamp(ResourcePoints.value, 0, 10);
         victoryPoints.value += victoryPointsVal;
         if (checkWinCondition())
         {
